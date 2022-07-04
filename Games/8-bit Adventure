@@ -1,0 +1,495 @@
+var mySong = new Audio("https://codehs.com/uploads/6b047e4c406c49fef5191532343590c1");
+mySong.play();
+
+var backgroundScroll = 0; // toggles scrolling, 1 = scroll pressing "right", 2 = scroll pressing "left"
+
+
+var background1 = new WebImage("https://codehs.com/uploads/3735abbe5a116ebfee37e432f95dafd6");
+background1.setSize(410, 500);
+background1.setPosition(0,0);
+add(background1); // first background you see
+
+var background2 = new WebImage("https://codehs.com/uploads/3735abbe5a116ebfee37e432f95dafd6");
+background2.setSize(410, 500);
+background2.setPosition(400,0);
+add(background2); // comes behind/infront of first background
+
+
+var playerUniX = 50;
+var playerUniY = 350;
+
+
+
+var tree1 = new WebImage("https://codehs.com/uploads/aebc68efe7299d87a27b3d38dca5d11d");
+tree1.setSize(150, 200);
+tree1.setPosition(400,250);
+add(tree1);
+
+var tree1Red = new WebImage("https://codehs.com/uploads/2f0b0814862c9646ce07728b638ba579");
+tree1Red.setSize(150, 200);
+tree1Red.setPosition(400,250);
+
+var tree2 = new WebImage("https://codehs.com/uploads/ecab29c35896e07d31412af6236a87c4");
+tree2.setSize(150, 200);
+tree2.setPosition(400,230);
+var tree3 = new WebImage("https://codehs.com/uploads/d7f9014322aa1cd6cf0573a683b6984b");
+tree3.setSize(150, 200);
+tree3.setPosition(400,230);
+var tree4 = new WebImage("https://codehs.com/uploads/bd30e20eec640e521269eb12dce081a2");
+tree4.setSize(150, 200);
+tree4.setPosition(400,230);
+
+var tree5 = new WebImage("https://codehs.com/uploads/bd30e20eec640e521269eb12dce081a2");
+tree5.setSize(150, 200);
+tree5.setPosition(400,230);
+var tree6 = new WebImage("https://codehs.com/uploads/ac329d160a9ef7503a6985223be1445d");
+tree6.setSize(150, 200);
+tree6.setPosition(400,230);
+var tree7 = new WebImage("https://codehs.com/uploads/051a04b5dabbd557cb1a3df13053078a");
+tree7.setSize(150, 200);
+tree7.setPosition(400,230);
+var tree8 = new WebImage("https://codehs.com/uploads/51da02655b76c62e0f04385eecf94ad0");
+tree8.setSize(150, 200);
+tree8.setPosition(400,230);
+var tree9 = new WebImage("https://codehs.com/uploads/ef92d24b494f7f4cd70a116f5fd92135");
+tree9.setSize(150, 200);
+tree9.setPosition(400,230);
+var tree10 = new WebImage("https://codehs.com/uploads/af003fa3d925aea69dcaa49d9ac0e2a0");
+tree10.setSize(150, 200);
+tree10.setPosition(400,230);
+var tree11 = new WebImage("https://codehs.com/uploads/b97afeba421919ec990fa56b00d7033a");
+tree11.setSize(150, 200);
+tree11.setPosition(400,230);
+var tree12 = new WebImage("https://codehs.com/uploads/16e705956b306c42fd0050e04fc8ec07");
+tree12.setSize(150, 200);
+tree12.setPosition(400,230);
+
+
+var tree13 = new WebImage("https://codehs.com/uploads/41e4edc2f566ce0d1a0f11b00aae3df9");
+tree13.setSize(150, 200);
+tree13.setPosition(400,230);
+
+var tree14 = new WebImage("https://codehs.com/uploads/37a0e887a0d564d82b9e14412c4e13e9");
+tree14.setSize(150, 200);
+tree14.setPosition(400,230);
+
+
+var text1 = new WebImage("https://codehs.com/uploads/039e8870471d58af4d32528719d998fa");
+text1.setSize(380, 35);
+text1.setPosition(100,40);
+add(text1);
+
+// walking animations -- 6 total
+var WalkingAno1 = new WebImage("https://codehs.com/uploads/2baebfd6d92082f54cef0ffb63484e8b");
+WalkingAno1.setSize(768, 512);
+WalkingAno1.setPosition(playerUniX,playerUniY);
+add(WalkingAno1);
+var WalkingAno2 = new WebImage("https://codehs.com/uploads/017deb0ad1ae160313d65a5369b9f0aa");
+WalkingAno2.setSize(768, 512);
+WalkingAno2.setPosition(playerUniX,playerUniY);
+var WalkingAno3 = new WebImage("https://codehs.com/uploads/733a755c1e5dac43b4fbab81125b1e82");
+WalkingAno3.setSize(768, 512);
+WalkingAno3.setPosition(playerUniX,playerUniY);
+var WalkingAno4 = new WebImage("https://codehs.com/uploads/7c6274fcc6b41b8811b790fd58b2e066");
+WalkingAno4.setSize(768, 512);
+WalkingAno4.setPosition(playerUniX,playerUniY);
+var WalkingAno5 = new WebImage("https://codehs.com/uploads/5146b0a811b22c39bfcc8b9da5682e65");
+WalkingAno5.setSize(768, 512);
+WalkingAno5.setPosition(playerUniX,playerUniY);
+var WalkingAno6 = new WebImage("https://codehs.com/uploads/cc4da7ad67e5b967f084da999c6c1ae5");
+WalkingAno6.setSize(768, 512);
+WalkingAno6.setPosition(playerUniX,playerUniY);
+
+// running animations -- 6 total
+var RunningAno1 = new WebImage("https://codehs.com/uploads/f534567746b92afcb6b86c7ea9f50152");
+RunningAno1.setSize(768, 512);
+RunningAno1.setPosition(playerUniX,playerUniY);
+var RunningAno2 = new WebImage("https://codehs.com/uploads/a4d96c8555f4565dcda2b8c3d4e6c7e4");
+RunningAno2.setSize(768, 512);
+RunningAno2.setPosition(playerUniX,playerUniY);
+var RunningAno3 = new WebImage("https://codehs.com/uploads/0be1303df98dcdc08b429b3bc70e31fc");
+RunningAno3.setSize(768, 512);
+RunningAno3.setPosition(playerUniX,playerUniY);
+var RunningAno4 = new WebImage("https://codehs.com/uploads/1aca1da7b0bc234e3edc802723fce58c");
+RunningAno4.setSize(768, 512);
+RunningAno4.setPosition(playerUniX,playerUniY);
+var RunningAno5 = new WebImage("https://codehs.com/uploads/2756777ef84c1bc1ee34ec1812523525");
+RunningAno5.setSize(768, 512);
+RunningAno5.setPosition(playerUniX,playerUniY);
+var RunningAno6 = new WebImage("https://codehs.com/uploads/36e3087544b1d726886a4873261d4965");
+RunningAno6.setSize(768, 512);
+RunningAno6.setPosition(playerUniX,playerUniY);
+
+
+// jumping animations -- 6 total
+var jumpingAno1 = new WebImage("https://codehs.com/uploads/0bb3a2eef216db3950773fb09fff26fe");
+jumpingAno1.setSize(768, 512);
+jumpingAno1.setPosition(playerUniX,playerUniY);
+var jumpingAno2 = new WebImage("https://codehs.com/uploads/f6e71ed31e552b04082b0f0079d74d3e");
+jumpingAno2.setSize(768, 512);
+jumpingAno2.setPosition(playerUniX,playerUniY-30);
+var jumpingAno3 = new WebImage("https://codehs.com/uploads/19e9779ce406778440f246d55e775116");
+jumpingAno3.setSize(768, 512);
+jumpingAno3.setPosition(playerUniX,playerUniY-60);
+var jumpingAno4 = new WebImage("https://codehs.com/uploads/047db200e879a69c98c47a3e0fd45b96");
+jumpingAno4.setSize(768, 512);
+jumpingAno4.setPosition(playerUniX,playerUniY-30);
+var jumpingAno5 = new WebImage("https://codehs.com/uploads/aea24ad6566259bb2e3365c24648b491");
+jumpingAno5.setSize(768, 512);
+jumpingAno5.setPosition(playerUniX,playerUniY);
+var jumpingAno6 = new WebImage("https://codehs.com/uploads/5ee589bfa8cfbc4c07f3860921128b65");
+jumpingAno6.setSize(768, 512);
+jumpingAno6.setPosition(playerUniX,playerUniY);
+
+
+var AttackAno1 = new WebImage("https://codehs.com/uploads/4f30995c385494d860e42a68d0632e0e");
+AttackAno1.setSize(768, 512);
+AttackAno1.setPosition(playerUniX,playerUniY);
+
+var AttackAno2 = new WebImage("https://codehs.com/uploads/f858a5f4fdfb3e0887d980b8331630e1");
+AttackAno2.setSize(768, 512);
+AttackAno2.setPosition(playerUniX,playerUniY);
+
+var AttackAno3 = new WebImage("https://codehs.com/uploads/b2aef98085e1c6c643d50235a8e453d6");
+AttackAno3.setSize(768, 512);
+AttackAno3.setPosition(playerUniX,playerUniY);
+
+var AttackAno4 = new WebImage("https://codehs.com/uploads/3307656c1b7f0d2ba6eef44ddf3e51cb");
+AttackAno4.setSize(768, 512);
+AttackAno4.setPosition(playerUniX,playerUniY);
+
+var AttackAno5 = new WebImage("https://codehs.com/uploads/16341c281d2864b87a84f6af2cc0fb91");
+AttackAno5.setSize(768, 512);
+AttackAno5.setPosition(playerUniX,playerUniY);
+
+var AttackAno6 = new WebImage("https://codehs.com/uploads/38a3742347e6d0367d070362ae08d43c");
+AttackAno6.setSize(768, 512);
+AttackAno6.setPosition(playerUniX,playerUniY);
+
+
+
+
+var WalkingAno = 0;
+var RunningAno = 0;
+var jumpAno = 0;
+var jumpTick = 0;
+var AttackAno = 0;
+var AttackTick = 0;
+
+var treeCount = 0;
+var treeHit = 0;
+
+function start() {
+    keyUpMethod(keyUp);
+	keyDownMethod(keyDown);
+	
+	setTimer(onStep,1); // anomation for scrolling of background
+}
+
+
+function onStep(){
+    
+    if (RunningAno == 0){
+    if (backgroundScroll == 1 || backgroundScroll == 2){WalkingAno +=0.28;} // Walking Animation output
+    
+    if(WalkingAno > 0.1){
+        remove(RunningAno1);
+	    remove(RunningAno2);
+	    remove(RunningAno3);
+	    remove(RunningAno4);
+	    remove(RunningAno5);
+	    remove(RunningAno6);
+	    remove(jumpingAno6);
+
+    }
+    
+    if (WalkingAno > 1 && WalkingAno <= 5){remove(WalkingAno1);add(WalkingAno2);}
+    if (WalkingAno > 5 && WalkingAno <= 10){remove(WalkingAno2);add(WalkingAno3);}
+    if (WalkingAno > 10 && WalkingAno <= 15){remove(WalkingAno3);add(WalkingAno4);}
+    if (WalkingAno > 15 && WalkingAno <= 20){remove(WalkingAno4);add(WalkingAno5);}
+    if (WalkingAno > 20 && WalkingAno <= 25){remove(WalkingAno5);add(WalkingAno6);}
+    if (WalkingAno > 25 && WalkingAno <= 30){remove(WalkingAno6);add(WalkingAno1);}
+    if (WalkingAno > 30){WalkingAno = 0;} // walking animation ends here
+    }
+    if (RunningAno !==0){
+        remove(WalkingAno1);
+	    remove(WalkingAno2);
+	    remove(WalkingAno3);
+	    remove(WalkingAno4);
+	    remove(WalkingAno5);
+	    remove(WalkingAno6);
+	    remove(jumpingAno6);
+
+    }
+    
+    
+    if (backgroundScroll == 3){RunningAno+=0.3}
+    if (RunningAno > 0.2 && RunningAno <= 5){
+        remove(WalkingAno1);
+	    remove(WalkingAno2);
+	    remove(WalkingAno3);
+	    remove(WalkingAno4);
+	    remove(WalkingAno5);
+	    remove(WalkingAno6);
+	    remove(jumpingAno6);
+        remove(RunningAno1);add(RunningAno2);}
+    if (RunningAno > 5 && RunningAno <= 10){
+        remove(RunningAno2);add(RunningAno3);}
+    if (RunningAno > 10 && RunningAno <= 15){
+        remove(RunningAno3);add(RunningAno4);}
+    if (RunningAno > 15 && RunningAno <= 20){
+        remove(RunningAno4);add(RunningAno5);}
+    if (RunningAno > 20 && RunningAno <= 25){
+        remove(RunningAno5);add(RunningAno6);}
+    if (RunningAno > 25 && RunningAno <= 30){
+        remove(RunningAno6);add(RunningAno1);}
+    if (RunningAno > 30){RunningAno = 0;}
+    
+     
+    if (tree1.getX() < WalkingAno1.getX() && backgroundScroll == 2 && treeHit <=5){tree1.move(1.2,0)}
+    
+    
+    if (tree1.getX() > WalkingAno1.getX()  || treeHit >=5){
+    
+        if (backgroundScroll == 1){
+            background1.move(-1.2,0);
+            background2.move(-1.2,0);
+            tree1.move(-1.2,0);
+            
+        }
+        if (backgroundScroll == 2){
+            background1.move(1.2,0);
+            background2.move(1.2,0);
+            tree1.move(1.2,0);
+        }
+             
+        if (backgroundScroll == 3){
+            background1.move(-2.4,0);
+            background2.move(-2.4,0);
+            tree1.move(-2.4,0);
+        }
+            
+        if (background1.getX() < -400){
+            background1.setPosition(400,0);}
+        if (background2.getX() < -400){
+            background2.setPosition(400,0);}
+    
+        if (background1.getX() > 400){
+            background1.setPosition(-400,0);}
+        if (background2.getX() > 400){
+            background2.setPosition(-400,0);}
+            
+        if (backgroundScroll == 4 && WalkingAno != 15){
+            background1.move(-1.2,0);
+            background2.move(-1.2,0);
+            tree1.move(-1.2,0);
+        }
+            
+        if (backgroundScroll == 4 && RunningAno != 0 && WalkingAno != 15){
+            background1.move(-1.2,0);
+            background2.move(-1.2,0);
+            tree1.move(-1.2,0);
+        }
+    }
+        
+       
+
+
+    if (backgroundScroll == 4 && AttackTick == 0){jumpTick = 1;}
+    
+    if (jumpTick == 1){jumpAno+=0.4;
+        remove(WalkingAno1);
+	    remove(WalkingAno2);
+	    remove(WalkingAno3);
+	    remove(WalkingAno4);
+	    remove(WalkingAno5);
+	    remove(WalkingAno6);
+	    
+	    remove(RunningAno1);
+	    remove(RunningAno2);
+	    remove(RunningAno3);
+	    remove(RunningAno4);
+	    remove(RunningAno5);
+	    remove(RunningAno6);
+	    
+        
+        
+    }
+    
+    if (jumpAno > 0.2 && jumpAno <= 5){remove(jumpingAno6);add(jumpingAno1);}
+    if (jumpAno > 5 && jumpAno <= 10){remove(jumpingAno1);add(jumpingAno2);}
+    if (jumpAno > 10 && jumpAno <= 15){remove(jumpingAno2);add(jumpingAno3);}
+    if (jumpAno > 15 && jumpAno <= 20){remove(jumpingAno3);add(jumpingAno4);}
+    if (jumpAno > 20 && jumpAno <= 25){remove(jumpingAno4);add(jumpingAno5);}
+    if (jumpAno > 25 && jumpAno <= 30){remove(jumpingAno5);add(jumpingAno6);}
+    if (jumpAno > 30){
+        jumpTick=0;
+        jumpAno = 0;
+
+    }
+    
+
+    if (treeHit <=5){text1.setPosition(tree1.getX()-150,tree1.getY()-100);}
+    if (treeHit > 5){text1.setPosition(tree1.getX()-150,150);}
+    
+    tree2.setPosition(tree1.getX(),tree1.getY());
+    tree3.setPosition(tree1.getX(),tree1.getY());
+    tree4.setPosition(tree1.getX(),tree1.getY());
+    tree5.setPosition(tree1.getX(),tree1.getY());
+    
+    
+    tree6.setPosition(tree1.getX(),tree1.getY());
+    tree7.setPosition(tree1.getX(),tree1.getY());
+    tree8.setPosition(tree1.getX(),tree1.getY());
+    tree9.setPosition(tree1.getX(),tree1.getY());
+    tree10.setPosition(tree1.getX(),tree1.getY());
+    tree11.setPosition(tree1.getX(),tree1.getY());
+    tree12.setPosition(tree1.getX(),tree1.getY());
+    tree13.setPosition(tree1.getX(),tree1.getY());
+    tree14.setPosition(tree1.getX(),tree1.getY());
+
+
+        if (backgroundScroll == 5 && jumpTick == 0){AttackTick = 1;}
+        
+        if (AttackTick == 1){AttackAno+=0.5;
+            remove(WalkingAno1);
+    	    remove(WalkingAno2);
+    	    remove(WalkingAno3);
+    	    remove(WalkingAno4);
+    	    remove(WalkingAno5);
+    	    remove(WalkingAno6);
+    	    
+    	    remove(RunningAno1);
+    	    remove(RunningAno2);
+    	    remove(RunningAno3);
+    	    remove(RunningAno4);
+    	    remove(RunningAno5);
+    	    remove(RunningAno6);
+        }
+        
+        if (AttackAno > 0.3 && AttackAno < 5){remove(AttackAno6);add(AttackAno1);}
+        if (AttackAno > 5 && AttackAno < 10){remove(AttackAno1);add(AttackAno2);}
+        if (AttackAno > 10 && AttackAno < 15){remove(AttackAno2);add(AttackAno3);}
+        if (AttackAno > 15 && AttackAno < 20){remove(AttackAno3);add(AttackAno4);}
+        
+        if (AttackAno == 20 && treeHit <= 5){treeCount = 1
+            println(treeHit);
+            
+            if (treeCount == 1 && tree1.getX() < WalkingAno1.getX())
+            {treeHit += 1;}
+            
+            
+        if (treeHit == 1){remove(tree1);add(tree2)}
+        if (treeHit == 2){remove(tree2);add(tree3)}
+        if (treeHit == 3){remove(tree3);add(tree4)}
+        if (treeHit == 4){remove(tree4);add(tree5)}
+    }
+        
+        
+        if (AttackAno >= 21){treeCount = 0}
+        
+        if (treeHit >=5){treeHit+=0.1}
+        
+        if (treeHit > 5 && treeHit <= 6){remove(tree5);add(tree6);}
+        if (treeHit > 6 && treeHit <= 7){remove(tree6);add(tree7);}
+        if (treeHit > 7 && treeHit <= 8){remove(tree7);add(tree8);}
+        if (treeHit > 8 && treeHit <= 9){remove(tree8);add(tree9);}
+        if (treeHit > 9 && treeHit <= 10){remove(tree9);add(tree10);}
+        if (treeHit > 10 && treeHit <= 11){remove(tree10);add(tree11);}
+        if (treeHit > 11 && treeHit <= 12){remove(tree11);add(tree12);}
+        if (treeHit > 12 && treeHit <= 13){remove(tree12);add(tree13);}
+        if (treeHit > 13 && treeHit <= 14){remove(tree13);add(tree14);}
+
+
+        
+        
+        if (AttackAno > 20 && AttackAno < 25){remove(AttackAno4);add(AttackAno5);}
+        if (AttackAno > 25 && AttackAno < 30){remove(AttackAno5);add(AttackAno6);}
+        
+        if (AttackAno > 30){
+            remove(AttackAno6);
+            AttackAno = 0;
+            AttackTick = 0;
+            backgroundScroll = 0;
+        }
+
+
+        
+        
+    
+
+    if (treeHit > 14 && treeHit <= 28){
+        tree1.move(0,2)
+        tree14.rotate(3);
+    }
+
+
+        
+    
+    
+}
+
+
+
+
+function keyDown(e) {
+
+	if (e.keyCode == Keyboard.RIGHT) {
+	    if (backgroundScroll == 0){
+        remove(jumpingAno1);
+        remove(jumpingAno2);
+        remove(jumpingAno3);
+        remove(jumpingAno4);
+        remove(jumpingAno5);}
+        backgroundScroll = 1;}
+	
+	if (e.keyCode == Keyboard.LEFT) {backgroundScroll = 2;}
+	
+	if (e.keyCode == Keyboard.UP) {backgroundScroll = 4;}
+	
+
+	
+	
+	if (e.keyCode == Keyboard.letter('s') && WalkingAno != 15) {backgroundScroll = 3;}
+	
+	if (e.keyCode == Keyboard.letter('c')){backgroundScroll = 5;}
+	
+	
+	
+	
+	
+}
+
+
+function keyUp(e) {
+
+	if (e.keyCode == Keyboard.RIGHT) {backgroundScroll = 0;
+	    	WalkingAno = 15;
+	    	remove(WalkingAno1);
+	    	remove(WalkingAno2);
+	    	remove(WalkingAno3);
+	    	remove(WalkingAno4);
+	    	remove(WalkingAno5);
+	    	remove(WalkingAno6);
+	}
+
+	if (e.keyCode == Keyboard.LEFT) {backgroundScroll = 0;}
+	
+	if (e.keyCode == Keyboard.letter('c')){backgroundScroll = 1;}
+	
+
+	
+	if (e.keyCode == Keyboard.letter('s')) {
+	    if (backgroundScroll == 3){backgroundScroll = 1;}
+    RunningAno = 0;
+	}
+	
+if (e.keyCode == Keyboard.UP) {
+	    if (backgroundScroll == 4 && WalkingAno != 15 && RunningAno != 0){backgroundScroll = 3;}
+	    if (backgroundScroll == 4 && WalkingAno != 15){backgroundScroll = 1;}
+
+	    if (backgroundScroll == 4 && RunningAno == 0 && WalkingAno == 0){backgroundScroll = 0;}
+	    
+        if (backgroundScroll == 4){backgroundScroll = 1;}       
+}
+}
