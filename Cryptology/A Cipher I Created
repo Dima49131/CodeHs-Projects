@@ -1,0 +1,188 @@
+var inputMode = readInt("type 1 to initialize the input, type 2 to go to the cipher: ");
+var input = readLine("initialize the text by pressing 1 and copy it: ");
+
+
+/*
+set letterMode to 1 to use letters for correct format
+*/
+
+
+// set to 0 for number mode 
+var letterMode = 0;  // if == 1 // can type letter to put in correct format
+if (inputMode == 1){letterMode = 1;}
+if (inputMode == 2){letterMode = 0;}
+
+
+
+
+
+println('.');
+println('.');
+println('.');
+println('.');
+println('.');
+println('.');
+println('.');
+println('.');
+println('.');
+println('.');
+println();
+
+var code = [
+    [0],[1],[2],
+    [3],[4],[5],
+    [6],[7],[8],
+    [9],]
+var coder0 = code[0];
+var coder1 = code[1];
+var coder2 = code[2];
+var coder3 = code[3];
+var coder4 = code[4];
+var coder5 = code[5];
+var coder6 = code[6];
+var coder7 = code[7];
+var coder8 = code[8];
+var coder9 = code[9];    
+
+var code2 = [
+    ['a'],['b'],['c'],['d'],['e'],['f'],['g'],
+    ['h'],['i'],['j'],['k'],['l'],['m'],['n'],
+    ['o'],['p'],['q'],['r'],['s'],['t'],['u'],
+    ['v'],['w'],['x'],['y'],['z'],]
+var code3 = [
+    ['A'],['B'],['C'],['D'],['E'],['F'],['G'],
+    ['H'],['I'],['J'],['K'],['L'],['M'],['N'],
+    ['O'],['P'],['Q'],['R'],['S'],['T'],['U'],
+    ['V'],['W'],['X'],['Y'],['Z'],]
+    
+
+var coderL0 = code2[0]; // letters
+var coderL1 = code2[1];
+var coderL2 = code2[2];
+var coderL3 = code2[3];
+var coderL4 = code2[4];
+var coderL5 = code2[5];
+var coderL6 = code2[6];
+var coderL7 = code2[7];
+var coderL8 = code2[8];
+var coderL9 = code2[9];
+var coderL10 = code2[10];
+var coderL11 = code2[11];
+var coderL12 = code2[12];
+var coderL13 = code2[13];
+var coderL14 = code2[14];
+var coderL15 = code2[15];
+var coderL16 = code2[16];
+var coderL17 = code2[17];
+var coderL18 = code2[18];
+var coderL19 = code2[19];
+var coderL20 = code2[20];
+var coderL21 = code2[21];
+var coderL22 = code2[22];
+var coderL23 = code2[23];
+var coderL24 = code2[24];
+var coderL25 = code2[25];
+var coderL26 = code2[26];
+
+var coderCap0 = code3[0]; // CAP letters
+var coderCap1 = code3[1];
+var coderCap2 = code3[2];
+var coderCap3 = code3[3];
+var coderCap4 = code3[4];
+var coderCap5 = code3[5];
+var coderCap6 = code3[6];
+var coderCap7 = code3[7];
+var coderCap8 = code3[8];
+var coderCap9 = code3[9];
+var coderCap10 = code3[10];
+var coderCap11 = code3[11];
+var coderCap12 = code3[12];
+var coderCap13 = code3[13];
+var coderCap14 = code3[14];
+var coderCap15 = code3[15];
+var coderCap16 = code3[16];
+var coderCap17 = code3[17];
+var coderCap18 = code3[18];
+var coderCap19 = code3[19];
+var coderCap20 = code3[20];
+var coderCap21 = code3[21];
+var coderCap22 = code3[22];
+var coderCap23 = code3[23];
+var coderCap24 = code3[24];
+var coderCap25 = code3[25];
+var coderCap26 = code3[26];
+
+var rangeMin = 80000;
+var rangeMax = 90000;
+
+
+var int = 0;
+var int2 = 0;
+var int3 = 1;
+
+
+if (letterMode == 0){
+print("|");
+for (var i = 0; i < 9000; i ++){
+if (input[int] == coder0){print(int2 + " ");}
+if (input[int] == coder1){print(int2 + 1 + 26 * Randomizer.nextInt(rangeMin,rangeMax) + " ");}
+if (input[int] == coder2){print(int2 + 2 + 26 * Randomizer.nextInt(rangeMin,rangeMax) + " ");}
+if (input[int] == coder3){print(int2 + 3 + 26 * Randomizer.nextInt(rangeMin,rangeMax) + " ");}
+if (input[int] == coder4){print(int2 + 4 + 26 * Randomizer.nextInt(rangeMin,rangeMax) + " ");}
+if (input[int] == coder5){print(int2 + 5 + 26 * Randomizer.nextInt(rangeMin,rangeMax) + " ");}
+if (input[int] == coder6){print(int2 + 6 + 26 * Randomizer.nextInt(rangeMin,rangeMax) + " ");}
+if (input[int] == coder7){print(int2 + 7 + 26 * Randomizer.nextInt(rangeMin,rangeMax) + " ");}
+if (input[int] == coder8){print(int2 + 8 + 26 * Randomizer.nextInt(rangeMin,rangeMax) + " ");}
+if (input[int] == coder9){print(int2 + 9 + 26 * Randomizer.nextInt(rangeMin,rangeMax) + " ");}
+if (input[int] == '|'){print("|");}
+if (input[int] == '-'){print("- ");}
+if (input[int] == '_'){print("_");}
+
+if (input[int] == undefined){break;}
+if (input[int] != ' ' && input[int3] != undefined && input[int3] != " "){print("~ ");}
+
+int+=1;}
+print("|");
+}
+
+if (letterMode == 1){
+for (var i = 0; i < 90; i ++){
+if (input[int] == coderL0){print("1");}
+if (input[int] == coderL1){print("2");}
+if (input[int] == coderL2){print("3");}
+if (input[int] == coderL3){print("4");}
+if (input[int] == coderL4){print("5");}
+if (input[int] == coderL5){print("6");}
+if (input[int] == coderL6){print("7");}
+if (input[int] == coderL7){print("8");}
+if (input[int] == coderL8){print("9");}
+if (input[int] == coderL9){print("10");}
+if (input[int] == coderL10){print("11");}
+if (input[int] == coderL11){print("12");}
+if (input[int] == coderL12){print("13");}
+if (input[int] == coderL13){print("14");}
+if (input[int] == coderL14){print("15");}
+if (input[int] == coderL15){print("16");}
+if (input[int] == coderL16){print("17");}
+if (input[int] == coderL17){print("18");}
+if (input[int] == coderL18){print("19");}
+if (input[int] == coderL19){print("20");}
+if (input[int] == coderL20){print("21");}
+if (input[int] == coderL21){print("22");}
+if (input[int] == coderL22){print("23");}
+if (input[int] == coderL23){print("24");}
+if (input[int] == coderL24){print("25");}
+if (input[int] == coderL25){print("26");}
+
+if (input[int] == undefined){break;}
+
+
+if (input[int] == ' '){print("_");}
+if (input[int] != ' ' && input[int3] != undefined && input[int3] != " "){print("-");}
+
+
+int+=1;
+int3+=1;
+}
+
+}
