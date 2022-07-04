@@ -1,0 +1,24 @@
+var inputArr = [];
+var FinalInputArr = [];
+var input = readLine('type in numbers: ');
+var key = readLine('type in key: ');
+var inputConvert = input / key;
+var newInput = inputConvert.toString();
+var InputParse;
+var toLetter;
+
+println(newInput);
+for (var i = 0; i < newInput.length; i+=2){
+    if (newInput[i] + newInput[i+1] >= 26){inputArr.push(newInput[i]);inputArr.push(newInput[i+1]);}
+    if (newInput[i] + newInput[i+1] <= 26){inputArr.push(newInput[i] + newInput[i+1]);}
+}
+
+if (newInput.length % 2 != 0){inputArr.push(newInput[newInput.length-1]);}
+println();
+
+for (var i = 0; i < inputArr.length; i++){
+    InputParse = parseInt(inputArr[i]);
+    toLetter = String.fromCharCode(InputParse + 96);
+    FinalInputArr.push(toLetter);
+    print(FinalInputArr[i]);
+}
