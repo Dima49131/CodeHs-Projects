@@ -37,6 +37,8 @@ __Animations__
  
 [A1Z26 Cipher](https://codehs.com/sandbox/id/a1z26-cipher-f7wXj4/run)
 
+[A1Z26 Cipher 2.0 (no decoding but incorperates all characters)](https://codehs.com/sandbox/id/a1z26-cipher-designed-for-large-texts-Eegjsy/run)
+
 [A Cipher I Created](https://codehs.com/sandbox/id/complex-coder-true-split-off-one-way-vtZOrL/run)
 
 [Addition Key Encrypter](https://codehs.com/sandbox/id/encrypter-with-random-key-EK85Zd/run) --->
