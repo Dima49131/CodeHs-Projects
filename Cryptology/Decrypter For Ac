@@ -1,0 +1,62 @@
+var textInput = readLine("Paste in the number text");
+var key = readLine("Paste in the key");
+
+
+
+var inputArr = [];
+
+var NumberLog = []; // anything after the dash - 22398472130
+var NumberOrder = []; // is 22222222 or begining of key
+var beginLog = 0; // ticker for dash
+
+var displaceCorrectment = 0; // used to callibrate spacing correctly
+
+for (var i = 0; i < textInput.length; i++){
+   if (textInput[i] + textInput[i+1] >= 10){inputArr.push(textInput[i] + textInput[i+1]);} 
+   if (textInput[i] == ' ' && textInput[i+1] == ' ' && textInput[i+2] == ' '){inputArr.push(' ');}
+}
+
+for (var i = 0; i < key.length; i++){
+    if (key[i] == '-'){beginLog = 1;}
+    if (beginLog == 0){NumberOrder.push(key[i]);}
+    if (beginLog == 1){
+        i++;
+        if (key[i] + key[i+1] >= 10){NumberLog.push(key[i] + key[i+1]);}
+    }
+}
+
+for (var i = 0; i < inputArr.length; i++){
+    if (inputArr[i] == ' '){i++;displaceCorrectment++;}
+    if (inputArr[i] > 0){inputArr[i]-=NumberLog[i - displaceCorrectment];}
+}
+
+
+for (var i = 0; i < inputArr.length; i++){
+    if (inputArr[i] == '1'){inputArr[i] = 'a';}    
+    if (inputArr[i] == '2'){inputArr[i] = 'b';}    
+    if (inputArr[i] == '3'){inputArr[i] = 'c';}    
+    if (inputArr[i] == '4'){inputArr[i] = 'd';}    
+    if (inputArr[i] == '5'){inputArr[i] = 'e';}    
+    if (inputArr[i] == '6'){inputArr[i] = 'f';}    
+    if (inputArr[i] == '7'){inputArr[i] = 'g';}    
+    if (inputArr[i] == '8'){inputArr[i] = 'h';}    
+    if (inputArr[i] == '9'){inputArr[i] = 'i';}    
+    if (inputArr[i] == '10'){inputArr[i] = 'j';}    
+    if (inputArr[i] == '11'){inputArr[i] = 'k';}    
+    if (inputArr[i] == '12'){inputArr[i] = 'l';}    
+    if (inputArr[i] == '13'){inputArr[i] = 'm';}    
+    if (inputArr[i] == '14'){inputArr[i] = 'n';}    
+    if (inputArr[i] == '15'){inputArr[i] = 'o';}    
+    if (inputArr[i] == '16'){inputArr[i] = 'p';}    
+    if (inputArr[i] == '17'){inputArr[i] = 'q';}    
+    if (inputArr[i] == '18'){inputArr[i] = 'r';}    
+    if (inputArr[i] == '19'){inputArr[i] = 's';}    
+    if (inputArr[i] == '20'){inputArr[i] = 't';}    
+    if (inputArr[i] == '21'){inputArr[i] = 'u';}    
+    if (inputArr[i] == '22'){inputArr[i] = 'v';}    
+    if (inputArr[i] == '23'){inputArr[i] = 'w';}    
+    if (inputArr[i] == '24'){inputArr[i] = 'x';}    
+    if (inputArr[i] == '25'){inputArr[i] = 'y';}    
+    if (inputArr[i] == '26'){inputArr[i] = 'z';}    
+    if (inputArr[i] == ' '){inputArr[i] = ' ';}    
+    print(inputArr[i]);}
