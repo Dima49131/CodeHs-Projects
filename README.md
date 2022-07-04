@@ -1,8 +1,8 @@
 # CodeHs-Projects
-A repository for the CodeHs projects ive done in the past. I've used the CodeHs website for a year and have created a variety of programs, some more useful than others. There are games, challenges and other miscellaneous projects. Down below are links to the projects hosted on the CodeHs website.
+A repository for the CodeHs projects ive done in the past. I've used the CodeHs website for a year and have created a variety of programs, some more useful than others. There are games, Animations and other miscellaneous projects. Down below are links to the projects hosted on the CodeHs website.
 
 
-// For more details on how the programs function and logic behind certain programs look at the Program files info.
+// For more details on how the programs function and logic behind certain programs look at the Program files info. (not made yet)
 
 
 
@@ -17,6 +17,18 @@ A repository for the CodeHs projects ive done in the past. I've used the CodeHs 
 [8-bit Adventure](https://codehs.com/sandbox/id/8-bit-adventure-q7uFV9) 
 
 [Thursday Night](https://codehs.com/sandbox/id/thurday-night-XHBJWN/run)
+
+Snake Game (Work in progress)
+
+.  .  .  .  .  .  .  .  .  .  .  .  .  .
+
+__Animations__
+
+[Golden Background](https://codehs.com/sandbox/id/animation-1-WxCjyN/run)
+
+[Beams of Light](https://codehs.com/sandbox/id/animation-2-7ctImw/run)
+
+[Wormhole (Click on the Canvas)](https://codehs.com/sandbox/id/animation-3-vZibxx/run)
 
 .  .  .  .  .  .  .  .  .  .  .  .  .  .
 
@@ -37,7 +49,16 @@ A repository for the CodeHs projects ive done in the past. I've used the CodeHs 
 
 .  .  .  .  .  .  .  .  .  .  .  .  .  .
 
+__Miscellaneous__
 
+
+[Infinitly large Num Calc (Addition Only)](https://codehs.com/sandbox/id/big-num-calc-for-addition-CseQKW/run)
+
+[Random Num Gen 1 to Octillion](https://codehs.com/sandbox/id/random-number-gen-to-octillion-7OSLjR/run)
+
+[Multiplication Table](https://codehs.com/sandbox/id/print-a-table-containing-multiplication-tables-eJIYED/run)
+
+Full Color Spectrum (I'll finish it eventually)
 
 
 
