@@ -1,0 +1,107 @@
+var bdAno1 = new WebImage('https://codehs.com/uploads/cb9f7042a588cd626144e0893b7c761a');
+setSize(600, 600);
+add(bdAno1);
+
+var bdAno2 = new WebImage('https://codehs.com/uploads/f9867f309fd6301aa2fc9ff40d3c520e');
+var bdAno3 = new WebImage('https://codehs.com/uploads/fc3eeec42933f029b12a64915b655690');
+var bdAno4 = new WebImage('https://codehs.com/uploads/b84f41a87df713e49c86ae28666af730');
+var bdAno5 = new WebImage('https://codehs.com/uploads/865038db5207551e45577f6f2a6f29f4');
+var bdAno6 = new WebImage('https://codehs.com/uploads/76ee2b23470ba5d311f13465037e125c');
+var bdAno7 = new WebImage('https://codehs.com/uploads/76ee2b23470ba5d311f13465037e125c');
+var bdAno8 = new WebImage('https://codehs.com/uploads/b6378fc973bf0d58aace69c808ece18c');
+var bdAno9 = new WebImage('https://codehs.com/uploads/02b8dd88c70ae82210e9ac91fbdf3ed7');
+var bdAno10 = new WebImage('https://codehs.com/uploads/d2b11db93ac14bfdb5691387db26074d');
+var bdAno11 = new WebImage('https://codehs.com/uploads/42d76b6d4f716af11bf45e179de63927');
+var bdAno12 = new WebImage('https://codehs.com/uploads/2ee71174c2f67220074e6713f270b0ba');
+var bdAno13 = new WebImage('https://codehs.com/uploads/8140e5d978938774b99e23c1921ad0aa');
+var bdAno14 = new WebImage('https://codehs.com/uploads/33a8ce7df9710519348ab74853fe244e');
+var bdAno15 = new WebImage('https://codehs.com/uploads/9d2f88ebf6d1a55ae1de98b7a0d9ca2f');
+var bdAno16 = new WebImage('https://codehs.com/uploads/52e7a9295ba1d46b1d18679e552c6f29');
+var bdAno17 = new WebImage('https://codehs.com/uploads/21103b2d1105ef6785e54bdc616bbad7');
+var bdAno18 = new WebImage('https://codehs.com/uploads/67596c3f5d11b6ac4a52757f6d022f5e');
+var bdAno19 = new WebImage('https://codehs.com/uploads/5c5f24689f8aed13b75e586e7b32e2d7');
+var bdAno20 = new WebImage('https://codehs.com/uploads/c441e847c1dba65d91b47b1172dcc01f');
+var bdAno21 = new WebImage('https://codehs.com/uploads/db542e722042e2865868b1bdb0f8053c');
+var bdAno22 = new WebImage('https://codehs.com/uploads/628685dafb64e74c394d67383419bd81');
+var bdAno23 = new WebImage('https://codehs.com/uploads/a8d0b3b4fad03bc3ee56df051ec39c58');
+var bdAno24 = new WebImage('https://codehs.com/uploads/19beafe4b6098b5a8ff68ab0d955e3a9');
+var bdAno25 = new WebImage('https://codehs.com/uploads/e47417e1915e07595bc80cfa4ba873b7');
+var bdAno26 = new WebImage('https://codehs.com/uploads/63f40006456aa14acda880e053930e01');
+var bdAno27 = new WebImage('https://codehs.com/uploads/37c67e731fe4c27fa9884a58fca80d8a');
+var bdAno28 = new WebImage('https://codehs.com/uploads/fb022f7b8780f2690401b8d925de0dee');
+var bdAno29 = new WebImage('https://codehs.com/uploads/85839bd45b0a051eec6d8775a29f4317');
+var bdAno30 = new WebImage('https://codehs.com/uploads/289c60863c856f2a67108e33a2e07748');
+var bdAno31 = new WebImage('https://codehs.com/uploads/b0023dbe6573e12c33d37bf60932e67f');
+var bdAno32 = new WebImage('https://codehs.com/uploads/2437fd515be96c9a5d92c051e89039e5');
+var bdAno33 = new WebImage('https://codehs.com/uploads/19fa9d81208a53c4d2ba85fa5e16a040');
+var bdAno34 = new WebImage('https://codehs.com/uploads/5a7622613942c623d15ac3dc785094d9');
+var bdAno35 = new WebImage('https://codehs.com/uploads/24ecb69baa3a87550b12f042a1ac7ad1');
+var bdAno36 = new WebImage('https://codehs.com/uploads/8faac9cf1f4e527f8cc129ed35015d73');
+var bdAno37 = new WebImage('https://codehs.com/uploads/5ae8baaae7f6938b96fd0f59b2e26400');
+var bdAno38 = new WebImage('https://codehs.com/uploads/b7b4d520125c58ca09c4e6189ce8cae2');
+var bdAno39 = new WebImage('https://codehs.com/uploads/ace49183510805de96a5ced3ded0f1da');
+var bdAno40 = new WebImage('https://codehs.com/uploads/a62c0362caac09787c0c73b2791e453e');
+var bdAno41 = new WebImage('https://codehs.com/uploads/350ab8ac87afb463cc255d6ddd3434e8');
+var bdAno42 = new WebImage('https://codehs.com/uploads/350ab8ac87afb463cc255d6ddd3434e8');
+var bdAno43 = new WebImage('https://codehs.com/uploads/3281dd8f8962aa79f8facab282b3b674');
+var bdAno44 = new WebImage('https://codehs.com/uploads/ebfc38bcddd8deee4ca523ca9375d11f');
+var bdAno45 = new WebImage('https://codehs.com/uploads/1b2170bdd564b9ad941d166d53c3e079');
+var bdAno46 = new WebImage('https://codehs.com/uploads/d8e69f82c46a58a6f4c2e24e48e363f6');
+var bdAno47 = new WebImage('https://codehs.com/uploads/816adf4619753b8e9b1afd1b5b9d3ae1');
+var bdAno48 = new WebImage('https://codehs.com/uploads/1cc667c5e71648c4a0a7599daf70397d');
+var bdAno49 = new WebImage('https://codehs.com/uploads/f9867f309fd6301aa2fc9ff40d3c520e');
+
+setTimer(animateBackground,24);
+var anoTicker = 0;
+function animateBackground(){
+    anoTicker++;
+    if (anoTicker == 0){add(bdAno2);remove(bdAno1);}
+    if (anoTicker == 1){add(bdAno3);remove(bdAno2);}
+    if (anoTicker == 2){add(bdAno4);remove(bdAno3);}
+    if (anoTicker == 3){add(bdAno5);remove(bdAno4);}
+    if (anoTicker == 4){add(bdAno6);remove(bdAno5);}
+    if (anoTicker == 5){add(bdAno7);remove(bdAno6);}
+    if (anoTicker == 6){add(bdAno8);remove(bdAno7);}
+    if (anoTicker == 7){add(bdAno9);remove(bdAno8);}
+    if (anoTicker == 8){add(bdAno10);remove(bdAno9);}
+    if (anoTicker == 9){add(bdAno11);remove(bdAno10);}
+    if (anoTicker == 10){add(bdAno12);remove(bdAno11);}
+    if (anoTicker == 11){add(bdAno13);remove(bdAno12);}
+    if (anoTicker == 12){add(bdAno14);remove(bdAno13);}
+    if (anoTicker == 13){add(bdAno15);remove(bdAno14);}
+    if (anoTicker == 14){add(bdAno16);remove(bdAno15);}
+    if (anoTicker == 15){add(bdAno17);remove(bdAno16);}
+    if (anoTicker == 16){add(bdAno18);remove(bdAno17);}
+    if (anoTicker == 17){add(bdAno19);remove(bdAno18);}
+    if (anoTicker == 18){add(bdAno20);remove(bdAno19);}
+    if (anoTicker == 19){add(bdAno21);remove(bdAno20);}
+    if (anoTicker == 20){add(bdAno22);remove(bdAno21);}
+    if (anoTicker == 21){add(bdAno23);remove(bdAno22);}
+    if (anoTicker == 22){add(bdAno24);remove(bdAno23);}
+    if (anoTicker == 23){add(bdAno25);remove(bdAno24);}
+    if (anoTicker == 24){add(bdAno26);remove(bdAno25);}
+    if (anoTicker == 25){add(bdAno27);remove(bdAno26);}
+    if (anoTicker == 26){add(bdAno28);remove(bdAno27);}
+    if (anoTicker == 27){add(bdAno29);remove(bdAno28);}
+    if (anoTicker == 28){add(bdAno30);remove(bdAno29);}
+    if (anoTicker == 29){add(bdAno31);remove(bdAno30);}
+    if (anoTicker == 30){add(bdAno32);remove(bdAno31);}
+    if (anoTicker == 31){add(bdAno33);remove(bdAno32);}
+    if (anoTicker == 32){add(bdAno34);remove(bdAno33);}
+    if (anoTicker == 33){add(bdAno35);remove(bdAno34);}
+    if (anoTicker == 34){add(bdAno36);remove(bdAno35);}
+    if (anoTicker == 35){add(bdAno37);remove(bdAno36);}
+    if (anoTicker == 36){add(bdAno38);remove(bdAno37);}
+    if (anoTicker == 37){add(bdAno39);remove(bdAno38);}
+    if (anoTicker == 38){add(bdAno40);remove(bdAno39);}
+    if (anoTicker == 39){add(bdAno41);remove(bdAno40);}
+    if (anoTicker == 40){add(bdAno42);remove(bdAno41);}
+    if (anoTicker == 41){add(bdAno43);remove(bdAno42);}
+    if (anoTicker == 42){add(bdAno44);remove(bdAno43);}
+    if (anoTicker == 43){add(bdAno45);remove(bdAno44);}
+    if (anoTicker == 44){add(bdAno46);remove(bdAno45);}
+    if (anoTicker == 45){add(bdAno47);remove(bdAno46);}
+    if (anoTicker == 46){add(bdAno48);remove(bdAno47);}
+    if (anoTicker == 47){add(bdAno49);remove(bdAno48);}
+    if (anoTicker >= 48){anoTicker = 0;}
+}
