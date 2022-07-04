@@ -9,6 +9,8 @@ A repository for the CodeHs projects ive done in the past. I've used the CodeHs 
  .  .  .  .  .  .  .  .  .  .  .  .  .  .
  
  __Games__ 
+ 
+ Snake Game (Work in progress)
 
 [Voider](https://codehs.com/sandbox/id/voider-m63lia/run)
 
@@ -18,7 +20,6 @@ A repository for the CodeHs projects ive done in the past. I've used the CodeHs 
 
 [Thursday Night](https://codehs.com/sandbox/id/thurday-night-XHBJWN/run)
 
-Snake Game (Work in progress)
 
 .  .  .  .  .  .  .  .  .  .  .  .  .  .
 
@@ -38,8 +39,6 @@ __Animations__
 
 [A Cipher I Created](https://codehs.com/sandbox/id/complex-coder-true-split-off-one-way-vtZOrL/run)
 
-// these next two are "Key Ciphers" and they both use random generated key
-
 [Addition Key Encrypter](https://codehs.com/sandbox/id/encrypter-with-random-key-EK85Zd/run) --->
 [Decrypter](https://codehs.com/sandbox/id/decrypts-random-key-L30nAt/run)
 
@@ -51,6 +50,7 @@ __Animations__
 
 __Miscellaneous__
 
+Full Color Spectrum (I'll finish it eventually)
 
 [Infinitly large Num Calc (Addition Only)](https://codehs.com/sandbox/id/big-num-calc-for-addition-CseQKW/run)
 
@@ -58,7 +58,6 @@ __Miscellaneous__
 
 [Multiplication Table](https://codehs.com/sandbox/id/print-a-table-containing-multiplication-tables-eJIYED/run)
 
-Full Color Spectrum (I'll finish it eventually)
 
 
 
