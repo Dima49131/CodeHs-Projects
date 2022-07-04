@@ -1,0 +1,16 @@
+var input = readLine("please put in input (no spaces): ");
+var inputSum = '';
+var inputArr = [];
+var key = Randomizer.nextInt(2,25);
+var asciiNum;
+
+for (var i = 0; i < input.length; i++){asciiNum = input.charCodeAt(i);{inputArr.push(asciiNum - 96);}}
+for (var i = 0; i < inputArr.length; i++){inputSum+=inputArr[i];}
+
+inputSum *= key;
+println();
+println('encoded = ' + inputSum);
+println('key = ' + key);
+
+println();
+println("decoded = " + inputSum/key + " = " + input);
