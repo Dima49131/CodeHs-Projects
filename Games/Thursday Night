@@ -1,0 +1,1378 @@
+// as of now click to start the game...
+
+/*
+
+I like how the bulk of my code was made in one night lol
+
+*/
+
+var mySong = new Audio("https://codehs.com/uploads/298b34db48058e144d3da9ec3d10ae8b");
+
+
+
+/// Thursday Night Thunkin //////
+// mention its inspired by Friday Night Funkin!, they derseve credit
+
+var X;
+var Y;
+
+
+var speedOfGame = 0; // make game speed "0" to pause the game
+
+
+arrows(40,38,0,arrows);
+arrows(158,87,270, Color.black);
+arrows(242,43,90, Color.black);
+arrows(360,40,180, Color.black);
+//arrows(320,130,0, Color.black); // sideway notes
+//arrows(340,270,270, Color.black);
+//arrows(340,330,90, Color.black);
+
+
+
+
+
+var arrowY = -50;
+arrows(40,arrowY,0,Color.purple); // left note
+var arrowY2 = -50;
+arrows2(40,arrowY,0, Color.purple); // left note 2
+var arrowY3 = -50;
+arrows3(40,arrowY,0, Color.purple); // left note 3
+var arrowY4 = -50;
+arrows4(40,arrowY,0, Color.purple); // left note 4
+var arrowY5 = -50;
+arrows5(40,arrowY,0, Color.purple); // left note 5
+var arrowY6 = -50;
+arrows6(40,arrowY,0, Color.purple); // left note 6
+var arrowY7 = -50;
+arrows7(40,arrowY,0, Color.purple); // left note 7
+var arrowY8 = -50;
+arrows8(40,arrowY,0, Color.purple); // left note 8
+var arrowY9 = -50;
+arrows9(40,arrowY,0, Color.purple); // left note 9
+var arrowY10 = -50;
+arrows10(40,arrowY,0, Color.purple); // left note 10
+
+var arrowY11 = -90;
+arrows11(158,arrowY11,270, Color.blue); // down note 1
+var arrowY12 = -50;
+arrows12(158,arrowY11,270, Color.blue); // down note 2
+var arrowY13 = -50;
+arrows13(158,arrowY11,270, Color.blue); // down note 3
+var arrowY14 = -50;
+arrows14(158,arrowY11,270, Color.blue); // down note 4
+var arrowY15 = -50;
+arrows15(158,arrowY11,270, Color.blue); // down note 5
+var arrowY16 = -50;
+arrows16(158,arrowY11,270, Color.blue); // down note 6
+var arrowY17 = -50;
+arrows17(158,arrowY11,270, Color.blue); // down note 7
+var arrowY18 = -50;
+arrows18(158,arrowY11,270, Color.blue); // down note 8
+var arrowY19 = -50;
+arrows19(158,arrowY11,270, Color.blue); // down note 9
+var arrowY20 = -50;
+arrows20(158,arrowY11,270, Color.blue); // down note 10
+
+var arrowY21 = -50;
+arrows21(242,arrowY21,90, Color.green); // up note 1
+var arrowY22 = 550;
+arrows22(242,arrowY,90, Color.green); // up note 2
+var arrowY23 = 550;
+arrows23(242,arrowY,90, Color.green); // up note 3
+var arrowY24 = 550;
+arrows24(242,arrowY,90, Color.green); // up note 4
+var arrowY25 = 550;
+arrows25(242,arrowY,90, Color.green); // up note 5
+var arrowY26 = 550;
+arrows26(242,arrowY,90, Color.green); // up note 6
+var arrowY27 = 550;
+arrows27(242,arrowY,90, Color.green); // up note 7
+var arrowY28 = 550;
+arrows28(242,arrowY,90, Color.green); // up note 8
+var arrowY29 = 550;
+arrows29(242,arrowY,90, Color.green); // up note 9
+var arrowY30 = 550;
+arrows30(242,arrowY,90, Color.green); // up note 10
+
+var arrowY31 = -50;
+arrows31(360,arrowY, 180, Color.red); // right note 1 
+var arrowY32 = 500;
+arrows32(360,arrowY, 180, Color.red); // right note 2 
+var arrowY33 = 500;
+arrows33(360,arrowY, 180, Color.red); // right note 3 
+var arrowY34 = 500;
+arrows34(360,arrowY, 180, Color.red); // right note 4 
+var arrowY35 = 500;
+arrows35(360,arrowY, 180, Color.red); // right note 5 
+var arrowY36 = 500;
+arrows36(360,arrowY, 180, Color.red); // right note 6 
+var arrowY37 = 500;
+arrows37(360,arrowY, 180, Color.red); // right note 7 
+var arrowY38 = 500;
+arrows38(360,arrowY, 180, Color.red); // right note 8 
+var arrowY39 = 500;
+arrows39(360,arrowY, 180, Color.red); // right note 9 
+var arrowY40 = 500;
+arrows40(360,arrowY, 180, Color.red); // right note 10
+
+
+
+// make sure rotation is set to correct one, else you get error where it cant read the variables
+
+var startTimer = 0;
+
+
+function start(){
+
+    keyDownMethod(keyDown);
+    mouseClickMethod(startGame);
+
+}
+
+
+function startGame(){// home computer speed : 
+    speedOfGame = -7; // for chromebook put at -16 -- seems to be best for now -- points 111
+    
+    
+    if (startTimer == 0){setTimer(onStep,150);startTimer+=1;}
+    
+    
+}
+
+
+var Y1;var Y2;var Y3;var Y4;var X5;var Y6;var Y7;var Y8;var X9;var Y10;
+var Y11;var Y12;var X13;var Y14;var Y15;var Y16;var Y17;var X18;var Y19;
+var Y20;var Y21;var Y22;var X23;var Y24;var Y25;var Y26;var Y27;var X28;
+var Y29;var Y30;var Y31;var Y32;var X33;var Y34;var Y35;var Y36;var Y37;
+var X38;var Y39;var Y40;
+
+var ticker = 0;
+
+var arrow;var arrowS1;var arrowS2;var arrowL;var arrowC; // left
+var arrow2;var arrow2S1;var arrow2S2;var arrow2L;var arrow2C; 
+var arrow3;var arrow3S1;var arrow3S2;var arrow3L;var arrow3C;
+var arrow4;var arrow4S1;var arrow4S2;var arrow4L;var arrow4C;
+var arrow5;var arrow5S1;var arrow5S2;var arrow5L;var arrow5C;
+var arrow6;var arrow6S1;var arrow6S2;var arrow6L;var arrow6C;
+var arrow7;var arrow7S1;var arrow7S2;var arrow7L;var arrow7C;
+var arrow8;var arrow8S1;var arrow8S2;var arrow8L;var arrow8C;
+var arrow9;var arrow9S1;var arrow9S2;var arrow9L;var arrow9C; // left end
+
+var arrow10;var arrow10S1;var arrow10S2;var arrow10L;var arrow10C; // down
+var arrow11;var arrow11S1;var arrow11S2;var arrow11L;var arrow11C;
+var arrow12;var arrow12S1;var arrow12S2;var arrow12L;var arrow12C;
+var arrow13;var arrow13S1;var arrow13S2;var arrow13L;var arrow13C;
+var arrow14;var arrow14S1;var arrow14S2;var arrow14L;var arrow14C;
+var arrow15;var arrow15S1;var arrow15S2;var arrow15L;var arrow15C;
+var arrow16;var arrow16S1;var arrow16S2;var arrow16L;var arrow16C;
+var arrow17;var arrow17S1;var arrow17S2;var arrow17L;var arrow17C;
+var arrow18;var arrow18S1;var arrow18S2;var arrow18L;var arrow18C;
+var arrow19;var arrow19S1;var arrow19S2;var arrow19L;var arrow19C;
+var arrow20;var arrow20S1;var arrow20S2;var arrow20L;var arrow20C; // down end
+
+var arrow21;var arrow21S1;var arrow21S2;var arrow21L;var arrow21C;// up
+var arrow22;var arrow22S1;var arrow22S2;var arrow22L;var arrow22C;
+var arrow23;var arrow23S1;var arrow23S2;var arrow23L;var arrow23C;
+var arrow24;var arrow24S1;var arrow24S2;var arrow24L;var arrow24C;
+var arrow25;var arrow25S1;var arrow25S2;var arrow25L;var arrow25C;
+var arrow26;var arrow26S1;var arrow26S2;var arrow26L;var arrow26C;
+var arrow27;var arrow27S1;var arrow27S2;var arrow27L;var arrow27C;
+var arrow28;var arrow28S1;var arrow28S2;var arrow28L;var arrow28C;
+var arrow29;var arrow29S1;var arrow29S2;var arrow29L;var arrow29C;
+var arrow30;var arrow30S1;var arrow30S2;var arrow30L;var arrow30C; // up end
+
+var arrow31;var arrow31S1;var arrow31S2;var arrow31L;var arrow31C;// right start
+var arrow32;var arrow32S1;var arrow32S2;var arrow32L;var arrow32C;
+var arrow33;var arrow33S1;var arrow33S2;var arrow33L;var arrow33C;
+var arrow34;var arrow34S1;var arrow34S2;var arrow34L;var arrow34C;
+var arrow35;var arrow35S1;var arrow35S2;var arrow35L;var arrow35C;
+var arrow36;var arrow36S1;var arrow36S2;var arrow36L;var arrow36C;
+var arrow37;var arrow37S1;var arrow37S2;var arrow37L;var arrow37C;
+var arrow38;var arrow38S1;var arrow38S2;var arrow38L;var arrow38C;
+var arrow39;var arrow39S1;var arrow39S2;var arrow39L;var arrow39C;
+var arrow40;var arrow40S1;var arrow40S2;var arrow40L;var arrow40C; // right end
+
+var took = 0;
+var time = 0;
+
+var addsArrowTicker = 2; // left 1
+var addsArrowTicker2 = 2; // left 2
+var addsArrowTicker3 = 2; // left 3
+var addsArrowTicker4 = 2; // left 4
+var addsArrowTicker5 = 2; // left 5
+var addsArrowTicker6 = 2; // left 6
+var addsArrowTicker7 = 2; // left 7
+var addsArrowTicker8 = 2; // left 8
+var addsArrowTicker9 = 2; // left 9
+var addsArrowTicker10 = 2; // left 10
+
+var addsArrowTicker11 = 2; // down 1
+var addsArrowTicker12 = 2; // down 2
+var addsArrowTicker13 = 2; // down 3
+var addsArrowTicker14 = 2; // down 4
+var addsArrowTicker15 = 2; // down 5
+var addsArrowTicker16 = 2; // down 6
+var addsArrowTicker17 = 2; // down 7
+var addsArrowTicker18 = 2; // down 8
+var addsArrowTicker19 = 2; // down 9
+var addsArrowTicker20 = 2; // down 10
+
+var addsArrowTicker21 = 2; // up 1
+var addsArrowTicker22 = 2; // up 2
+var addsArrowTicker23 = 2; // up 3
+var addsArrowTicker24 = 2; // up 4
+var addsArrowTicker25 = 2; // up 5
+var addsArrowTicker26 = 2; // up 6
+var addsArrowTicker27 = 2; // up 7
+var addsArrowTicker28 = 2; // up 8
+var addsArrowTicker29 = 2; // up 9
+var addsArrowTicker30 = 2; // up 10
+
+var addsArrowTicker31 = 2; // right 1
+var addsArrowTicker32 = 2; // right 2
+var addsArrowTicker33 = 2; // right 3
+var addsArrowTicker34 = 2; // right 4
+var addsArrowTicker35 = 2; // right 5
+var addsArrowTicker36 = 2; // right 6
+var addsArrowTicker37 = 2; // right 7
+var addsArrowTicker38 = 2; // right 8
+var addsArrowTicker39 = 2; // right 9
+var addsArrowTicker40 = 2; // right 10
+
+
+var time2 = 0;
+
+
+var points = 0;
+
+function onStep(){
+    if (addsArrowTicker == 1){add(arrow);add(arrowS1);add(arrowS2);add(arrowL);add(arrowC);remove(rect);add(rect);addsArrowTicker = 2;} // left 1
+    if (addsArrowTicker2 == 1){add(arrow2);add(arrow2S1);add(arrow2S2);add(arrow2L);add(arrow2C);remove(rect);add(rect);addsArrowTicker2 = 2;}// left 2
+    if (addsArrowTicker3 == 1){add(arrow3);add(arrow3S1);add(arrow3S2);add(arrow3L);add(arrow3C);remove(rect);add(rect);addsArrowTicker3 = 2;}// left 3
+    if (addsArrowTicker4 == 1){add(arrow4);add(arrow4S1);add(arrow4S2);add(arrow4L);add(arrow4C);remove(rect);add(rect);addsArrowTicker4 = 2;}// left 4
+    if (addsArrowTicker5 == 1){add(arrow5);add(arrow5S1);add(arrow5S2);add(arrow5L);add(arrow5C);remove(rect);add(rect);addsArrowTicker5 = 2;}// left 5
+    if (addsArrowTicker6 == 1){add(arrow6);add(arrow6S1);add(arrow6S2);add(arrow6L);add(arrow6C);remove(rect);add(rect);addsArrowTicker6 = 2;}// left 6
+    if (addsArrowTicker7 == 1){add(arrow7);add(arrow7S1);add(arrow7S2);add(arrow7L);add(arrow7C);remove(rect);add(rect);addsArrowTicker7 = 2;}// left 7 
+    if (addsArrowTicker8 == 1){add(arrow8);add(arrow8S1);add(arrow8S2);add(arrow8L);add(arrow8C);remove(rect);add(rect);addsArrowTicker8 = 2;}// left 8 
+    if (addsArrowTicker9 == 1){add(arrow9);add(arrow9S1);add(arrow9S2);add(arrow9L);add(arrow9C);remove(rect);add(rect);addsArrowTicker9 = 2;}// left 9 
+    if (addsArrowTicker10 == 1){add(arrow10);add(arrow10S1);add(arrow10S2);add(arrow10L);add(arrow10C);remove(rect);add(rect);addsArrowTicker10 = 2;} // left 10
+    if (addsArrowTicker11 == 1){add(arrow11);add(arrow11S1);add(arrow11S2);add(arrow11L);add(arrow11C);remove(rect);add(rect);addsArrowTicker11 = 2;}// down 1
+    if (addsArrowTicker12 == 1){add(arrow12);add(arrow12S1);add(arrow12S2);add(arrow12L);add(arrow12C);remove(rect);add(rect);addsArrowTicker12 = 2;}// down 2
+    if (addsArrowTicker13 == 1){add(arrow13);add(arrow13S1);add(arrow13S2);add(arrow13L);add(arrow13C);remove(rect);add(rect);addsArrowTicker13 = 2;}// down 3
+    if (addsArrowTicker14 == 1){add(arrow14);add(arrow14S1);add(arrow14S2);add(arrow14L);add(arrow14C);remove(rect);add(rect);addsArrowTicker14 = 2;}// down 4
+    if (addsArrowTicker15 == 1){add(arrow15);add(arrow15S1);add(arrow15S2);add(arrow15L);add(arrow15C);remove(rect);add(rect);addsArrowTicker15 = 2;}// down 5
+    if (addsArrowTicker16 == 1){add(arrow16);add(arrow16S1);add(arrow16S2);add(arrow16L);add(arrow16C);remove(rect);add(rect);addsArrowTicker16 = 2;}// down 6
+    if (addsArrowTicker17 == 1){add(arrow17);add(arrow17S1);add(arrow17S2);add(arrow17L);add(arrow17C);remove(rect);add(rect);addsArrowTicker17 = 2;}// down 7 
+    if (addsArrowTicker18 == 1){add(arrow18);add(arrow18S1);add(arrow18S2);add(arrow18L);add(arrow18C);remove(rect);add(rect);addsArrowTicker18 = 2;}// down 8 
+    if (addsArrowTicker19 == 1){add(arrow19);add(arrow19S1);add(arrow19S2);add(arrow19L);add(arrow19C);remove(rect);add(rect);addsArrowTicker19 = 2;}// down 9 
+    if (addsArrowTicker20 == 1){add(arrow20);add(arrow10S1);add(arrow10S2);add(arrow10L);add(arrow10C);remove(rect);add(rect);addsArrowTicker20 = 2;}// down 10
+    if (addsArrowTicker21 == 1){add(arrow21);add(arrow21S1);add(arrow21S2);add(arrow21L);add(arrow21C);remove(rect);add(rect);addsArrowTicker21 = 2;}// up 1
+    if (addsArrowTicker22 == 1){add(arrow22);add(arrow22S1);add(arrow22S2);add(arrow22L);add(arrow22C);remove(rect);add(rect);addsArrowTicker22 = 2;}// up 2
+    if (addsArrowTicker23 == 1){add(arrow23);add(arrow23S1);add(arrow23S2);add(arrow23L);add(arrow23C);remove(rect);add(rect);addsArrowTicker23 = 2;}// up 3
+    if (addsArrowTicker24 == 1){add(arrow24);add(arrow24S1);add(arrow24S2);add(arrow24L);add(arrow24C);remove(rect);add(rect);addsArrowTicker24 = 2;}// up 4
+    if (addsArrowTicker25 == 1){add(arrow25);add(arrow25S1);add(arrow25S2);add(arrow25L);add(arrow25C);remove(rect);add(rect);addsArrowTicker25 = 2;}// up 5
+    if (addsArrowTicker26 == 1){add(arrow26);add(arrow26S1);add(arrow26S2);add(arrow26L);add(arrow26C);remove(rect);add(rect);addsArrowTicker26 = 2;}// up 6
+    if (addsArrowTicker27 == 1){add(arrow27);add(arrow27S1);add(arrow27S2);add(arrow27L);add(arrow27C);remove(rect);add(rect);addsArrowTicker27 = 2;}// up 7 
+    if (addsArrowTicker28 == 1){add(arrow28);add(arrow28S1);add(arrow28S2);add(arrow28L);add(arrow28C);remove(rect);add(rect);addsArrowTicker28 = 2;}// up 8 
+    if (addsArrowTicker29 == 1){add(arrow29);add(arrow29S1);add(arrow29S2);add(arrow29L);add(arrow29C);remove(rect);add(rect);addsArrowTicker29 = 2;}// up 9 
+    if (addsArrowTicker30 == 1){add(arrow30);add(arrow30S1);add(arrow30S2);add(arrow30L);add(arrow30C);remove(rect);add(rect);addsArrowTicker30 = 2;}// up 10
+    if (addsArrowTicker31 == 1){add(arrow31);add(arrow31S1);add(arrow31S2);add(arrow31L);add(arrow31C);remove(rect);add(rect);addsArrowTicker31 = 2;}// right 1
+    if (addsArrowTicker32 == 1){add(arrow32);add(arrow32S1);add(arrow32S2);add(arrow32L);add(arrow32C);remove(rect);add(rect);addsArrowTicker32 = 2;}// right 2
+    if (addsArrowTicker33 == 1){add(arrow33);add(arrow33S1);add(arrow33S2);add(arrow33L);add(arrow33C);remove(rect);add(rect);addsArrowTicker33 = 2;}// right 3
+    if (addsArrowTicker34 == 1){add(arrow34);add(arrow34S1);add(arrow34S2);add(arrow34L);add(arrow34C);remove(rect);add(rect);addsArrowTicker34 = 2;}// right 4
+    if (addsArrowTicker35 == 1){add(arrow35);add(arrow35S1);add(arrow35S2);add(arrow35L);add(arrow35C);remove(rect);add(rect);addsArrowTicker35 = 2;}// right 5
+    if (addsArrowTicker36 == 1){add(arrow36);add(arrow36S1);add(arrow36S2);add(arrow36L);add(arrow36C);remove(rect);add(rect);addsArrowTicker36 = 2;}// right 6
+    if (addsArrowTicker37 == 1){add(arrow37);add(arrow37S1);add(arrow37S2);add(arrow37L);add(arrow37C);remove(rect);add(rect);addsArrowTicker37 = 2;}// right 7 
+    if (addsArrowTicker38 == 1){add(arrow38);add(arrow38S1);add(arrow38S2);add(arrow38L);add(arrow38C);remove(rect);add(rect);addsArrowTicker38 = 2;}// right 8 
+    if (addsArrowTicker39 == 1){add(arrow39);add(arrow39S1);add(arrow39S2);add(arrow39L);add(arrow39C);remove(rect);add(rect);addsArrowTicker39 = 2;}// right 9 
+    if (addsArrowTicker40 == 1){add(arrow40);add(arrow40S1);add(arrow40S2);add(arrow40L);add(arrow40C);remove(rect);add(rect);addsArrowTicker40 = 2;}// right 10
+    
+    
+    
+    if (time == 0){setTimer(moveNotes,5);time+=1;}
+    if (time >= 1){time +=1;
+        
+    }
+}
+
+var X1;
+var Y1;
+
+var rect = new Rectangle(400, 50);
+rect.setPosition(0, 470);
+rect.setColor(Color.white);
+
+var Amount = 300;
+
+function moveNotes(){
+    
+
+
+    
+    
+    if (time == 4){arrowY = 400;mySong.play();}// left
+    if (time == 5){arrowY21 = 400;} // up
+    
+    if (time == 8){arrowY2 = 400;}// left
+    
+    if (time == 10){arrowY12 = 400;}// down
+    
+    if (time == 12){arrowY = 400;}// left
+    
+    if (time == 16){arrowY2 = 400;}// left
+    
+    if (time == 18){arrowY12 = 400;}// down
+    
+    if (time == 20){arrowY = 400;}// left
+    
+    if (time == 23){arrowY = 400;}// left
+    if (time == 24){arrowY13 = 400;}// down
+    if (time == 26){arrowY31 = 400;}// right
+    if (time == 27){arrowY21 = 400;}// up
+    if (time == 28){arrowY = 400;}// left
+    if (time == 29){arrowY13 = 400;}// do
+    if (time == 30){arrowY32 = 400;}// right
+    if (time == 32){arrowY12 = 400;}// down
+    
+    if (time == 35){arrowY23 = 400;}// Up
+    if (time == 35){arrowY13 = 400;}// Down
+
+    
+    if (time == 37){arrowY33 = 400;}// Right
+    if (time == 38){arrowY22 = 400;}// Up
+
+    if (time == 39){arrowY12 = 400;}// Down
+
+    
+    if (time == 42){arrowY13 = 400;}// down
+    if (time == 43){arrowY12 = 400;}// down
+    if (time == 44){arrowY14 = 400;}// down
+
+    if (time == 45){arrowY22 = 400;}// Up
+    
+    if (time == 47){arrowY = 400;}// left
+    if (time == 47){arrowY32 = 400;}// Right
+    
+    if (time == 50){arrowY2 = 400;}// left
+
+    if (time == 52){arrowY14 = 400;}// down
+    if (time == 52){arrowY22 = 400;}// Up
+    
+    if (time == 56){arrowY = 400;}// left
+
+    if (time == 59){arrowY = 400;}// left
+
+    
+    if (time == 60){arrowY12 = 400;}// Down
+    if (time == 61){arrowY13 = 400;}// Down
+    if (time == 62){arrowY33 = 400;}// Right
+    if (time == 63){arrowY22 = 400;}// Up
+    if (time == 64){arrowY14 = 400;}// Down
+    if (time == 65){arrowY33 = 400;}// Right
+    if (time == 66){arrowY22 = 400;}// Up
+    if (time == 67){arrowY12 = 400;}// Down
+    if (time == 68){arrowY2 = 400;}// Left
+    if (time == 70){arrowY13 = 400;}// Down
+    if (time == 71){arrowY33 = 400;}// Right
+    if (time == 72){arrowY22 = 400;}// Up
+    if (time == 73){arrowY12 = 400;}// Down
+    if (time == 74){arrowY2 = 400;}// Left
+    if (time == 75){arrowY33 = 400;}// Right
+    if (time == 76){arrowY34 = 400;}// Right
+    if (time == 77){arrowY12 = 400;}// Down
+    if (time == 77){arrowY33 = 400;}// Right
+    if (time == 78){arrowY33 = 400;}// Right
+    if (time == 79){arrowY22 = 400;}// Up
+    if (time == 80){arrowY2 = 400;}// Left
+    if (time == 81){arrowY13 = 400;}// Down
+    if (time == 82){arrowY22 = 400;}// Up
+    if (time == 83){arrowY2 = 400;}// Left
+    if (time == 84){arrowY12 = 400;}// Down
+    if (time == 85){arrowY13 = 400;}// Down
+    if (time == 85){arrowY33 = 400;}// Right
+    
+    if (time == 89){arrowY2 = 400;}// Left
+    if (time == 90){arrowY12 = 400;}// Down
+    if (time == 91){arrowY22 = 400;}// Up
+    if (time == 92){arrowY33 = 400;}// Right
+    if (time == 93){arrowY23 = 400;}// Up
+    if (time == 94){arrowY13 = 400;}// Down
+    if (time == 95){arrowY2 = 400;}// Left
+
+    if (time == 98){arrowY = 400;}// Left
+    if (time == 100){arrowY12 = 400;}// Down
+    if (time == 101){arrowY33 = 400;}// Right
+    if (time == 102){arrowY22 = 400;}// Up
+    if (time == 103){arrowY2 = 400;}// Left
+    if (time == 104){arrowY12 = 400;}// Down
+    if (time == 105){arrowY23 = 400;}// Up
+    if (time == 106){arrowY33 = 400;}// Right
+    if (time == 107){arrowY12 = 400;}// Down
+    if (time == 108){arrowY22 = 400;}// Up
+
+    if (time == 110){arrowY3 = 400;}// Left
+    if (time == 110){arrowY34 = 400;}// Right
+
+    
+    if (time == 112){arrowY3 = 400;}// Left
+    if (time == 113){arrowY12 = 400;}// Down
+
+    if (time == 116){arrowY14 = 400;}// Down
+    
+    if (time == 118){arrowY33 = 400;}// Right
+
+    if (time == 122){arrowY12 = 400;}// Down
+    if (time == 123){arrowY13 = 400;}// Down
+    if (time == 124){arrowY33 = 400;}// Right
+    
+    if (time == 126){arrowY22 = 400;}// Up
+    
+    if (time == 128){arrowY2 = 400;}// Left
+    if (time == 129){arrowY12 = 400;}// Down
+    if (time == 130){arrowY22 = 400;}// Up
+    
+    if (time == 132){arrowY3 = 400;}// Left
+    if (time == 133){arrowY12 = 400;}// Down
+    if (time == 134){arrowY32 = 400;}// Right
+    if (time == 135){arrowY13 = 400;}// Down
+    if (time == 136){arrowY33 = 400;}// Right
+    if (time == 137){arrowY24 = 400;}// Up
+    if (time == 138){arrowY12 = 400;}// Down
+
+
+    if (time == 143){arrowY13 = 400;}// Down
+    if (time == 144){arrowY32 = 400;}// Right
+    if (time == 145){arrowY22 = 400;}// Up
+    if (time == 146){arrowY33 = 400;}// Right
+    
+    if (time == 149){arrowY34 = 400;}// Right
+    if (time == 150){arrowY35 = 400;}// Right
+    if (time == 151){arrowY13 = 400;}// Down
+    if (time == 152){arrowY3 = 400;}// Left
+    if (time == 153){arrowY22 = 400;}// Up
+    if (time == 154){arrowY4 = 400;}// Left
+    if (time == 155){arrowY12 = 400;}// Down
+    if (time == 156){arrowY34 = 400;}// Right
+    
+    if (time == 158){arrowY5 = 400;}// Left
+    if (time == 159){arrowY33 = 400;}// Right
+    
+    if (time == 161){arrowY4 = 400;}// Left
+    if (time == 162){arrowY5 = 400;}// Left
+    
+    if (time == 164){arrowY13 = 400;}// Down
+    if (time == 165){arrowY33 = 400;}// Right
+    if (time == 166){arrowY22 = 400;}// Up
+    if (time == 167){arrowY23 = 400;}// Up
+    
+    if (time == 171){arrowY13 = 400;}// Down
+
+    if (time == 174){arrowY5 = 400;}// Left
+    if (time == 175){arrowY33 = 400;}// Right
+    if (time == 176){arrowY6 = 400;}// Left
+    if (time == 177){arrowY32 = 400;}// Right
+
+    if (time == 180){arrowY12 = 400;}// Down
+
+    if (time == 182){arrowY13 = 400;}// Down
+    if (time == 183){arrowY14 = 400;}// Down
+
+
+
+
+
+
+
+
+
+    if (arrowY > -50){arrowY+=speedOfGame;arrow.move(0, speedOfGame);arrowS1.move(0, speedOfGame);arrowS2.move(0, speedOfGame);arrowL.move(0, speedOfGame);arrowC.move(0, speedOfGame);}
+    if (arrowY <= -50){X1 = 40;Y1 = 500;arrow.setPosition(X1, Y1);arrowS1.setPosition(X1, Y1+25);arrowS2.setPosition(X1+20, Y1+13);arrowL.setPosition(X1+30, Y1+12);arrowC.setPosition(X1+10, Y1+10);if (addsArrowTicker == 0){addsArrowTicker = 1;}}
+    if (arrowY2 > -50){arrowY2+=speedOfGame;arrow2.move(0, speedOfGame);arrow2S1.move(0, speedOfGame);arrow2S2.move(0, speedOfGame);arrow2L.move(0, speedOfGame);arrow2C.move(0, speedOfGame);}
+    if (arrowY2 <= -50){X1 = 40;Y1 = 500;arrow2.setPosition(X1, Y1);arrow2S1.setPosition(X1, Y1+25);arrow2S2.setPosition(X1+20, Y1+13);arrow2L.setPosition(X1+30, Y1+12);arrow2C.setPosition(X1+10, Y1+10);if (addsArrowTicker2 == 0){addsArrowTicker2 = 1;}}
+    if (arrowY3 > -50){arrowY3+=speedOfGame;arrow3.move(0, speedOfGame);arrow3S1.move(0, speedOfGame);arrow3S2.move(0, speedOfGame);arrow3L.move(0, speedOfGame);arrow3C.move(0, speedOfGame);}
+    if (arrowY3 <= -50){X1 = 40;Y1 = 500;arrow3.setPosition(X1, Y1);arrow3S1.setPosition(X1, Y1+25);arrow3S2.setPosition(X1+20, Y1+13);arrow3L.setPosition(X1+30, Y1+12);arrow3C.setPosition(X1+10, Y1+10);if (addsArrowTicker3 == 0){addsArrowTicker3 = 1;}}
+    if (arrowY4 > -50){arrowY4+=speedOfGame;arrow4.move(0, speedOfGame);arrow4S1.move(0, speedOfGame);arrow4S2.move(0, speedOfGame);arrow4L.move(0, speedOfGame);arrow4C.move(0, speedOfGame);}
+    if (arrowY4 <= -50){X1 = 40;Y1 = 500;arrow4.setPosition(X1, Y1);arrow4S1.setPosition(X1, Y1+25);arrow4S2.setPosition(X1+20, Y1+13);arrow4L.setPosition(X1+30, Y1+12);arrow4C.setPosition(X1+10, Y1+10);if (addsArrowTicker4 == 0){addsArrowTicker4 = 1;}}
+    if (arrowY5 > -50){arrowY5+=speedOfGame;arrow5.move(0, speedOfGame);arrow5S1.move(0, speedOfGame);arrow5S2.move(0, speedOfGame);arrow5L.move(0, speedOfGame);arrow5C.move(0, speedOfGame);}
+    if (arrowY5 <= -50){X1 = 40;Y1 = 500;arrow5.setPosition(X1, Y1);arrow5S1.setPosition(X1, Y1+25);arrow5S2.setPosition(X1+20, Y1+13);arrow5L.setPosition(X1+30, Y1+12);arrow5C.setPosition(X1+10, Y1+10);if (addsArrowTicker5 == 0){addsArrowTicker5 = 1;}}
+    if (arrowY6 > -50){arrowY6+=speedOfGame;arrow6.move(0, speedOfGame);arrow6S1.move(0, speedOfGame);arrow6S2.move(0, speedOfGame);arrow6L.move(0, speedOfGame);arrow6C.move(0, speedOfGame);}
+    if (arrowY6 <= -50){X1 = 40;Y1 = 500;arrow6.setPosition(X1, Y1);arrow6S1.setPosition(X1, Y1+25);arrow6S2.setPosition(X1+20, Y1+13);arrow6L.setPosition(X1+30, Y1+12);arrow6C.setPosition(X1+10, Y1+10);if (addsArrowTicker6 == 0){addsArrowTicker6 = 1;}}
+    if (arrowY7 > -50){arrowY7+=speedOfGame;arrow7.move(0, speedOfGame);arrow7S1.move(0, speedOfGame);arrow7S2.move(0, speedOfGame);arrow7L.move(0, speedOfGame);arrow7C.move(0, speedOfGame);}
+    if (arrowY7 <= -50){X1 = 40;Y1 = 500;arrow7.setPosition(X1, Y1);arrow7S1.setPosition(X1, Y1+25);arrow7S2.setPosition(X1+20, Y1+13);arrow7L.setPosition(X1+30, Y1+12);arrow7C.setPosition(X1+10, Y1+10);if (addsArrowTicker7 == 0){addsArrowTicker7 = 1;}}
+    if (arrowY8 > -50){arrowY8+=speedOfGame;arrow8.move(0, speedOfGame);arrow8S1.move(0, speedOfGame);arrow8S2.move(0, speedOfGame);arrow8L.move(0, speedOfGame);arrow8C.move(0, speedOfGame);}
+    if (arrowY8 <= -50){X1 = 40;Y1 = 500;arrow8.setPosition(X1, Y1);arrow8S1.setPosition(X1, Y1+25);arrow8S2.setPosition(X1+20, Y1+13);arrow8L.setPosition(X1+30, Y1+12);arrow8C.setPosition(X1+10, Y1+10);if (addsArrowTicker8 == 0){addsArrowTicker8 = 1;}}
+    if (arrowY9 > -50){arrowY9+=speedOfGame;arrow9.move(0, speedOfGame);arrow9S1.move(0, speedOfGame);arrow9S2.move(0, speedOfGame);arrow9L.move(0, speedOfGame);arrow9C.move(0, speedOfGame);}
+    if (arrowY9 <= -50){X1 = 40;Y1 = 500;arrow9.setPosition(X1, Y1);arrow9S1.setPosition(X1, Y1+25);arrow9S2.setPosition(X1+20, Y1+13);arrow9L.setPosition(X1+30, Y1+12);arrow9C.setPosition(X1+10, Y1+10);if (addsArrowTicker9 == 0){addsArrowTicker9 = 1;}}
+    if (arrowY10 > -50){arrowY10+=speedOfGame;arrow10.move(0, speedOfGame);arrow10S1.move(0, speedOfGame);arrow10S2.move(0, speedOfGame);arrow10L.move(0, speedOfGame);arrow10C.move(0, speedOfGame);}
+    if (arrowY10 <= -50){X1 = 40;Y1 = 500;arrow10.setPosition(X1, Y1);arrow10S1.setPosition(X1, Y1+25);arrow10S2.setPosition(X1+20, Y1+13);arrow10L.setPosition(X1+30, Y1+12);arrow10C.setPosition(X1+10, Y1+10);if (addsArrowTicker10 == 0){addsArrowTicker10 = 1;}}
+    if (arrowY11 > -50){arrowY11+=speedOfGame;arrow11.move(0, speedOfGame);arrow11S1.move(0, speedOfGame);arrow11S2.move(0, speedOfGame);arrow11L.move(0, speedOfGame);arrow11C.move(0, speedOfGame);}
+    if (arrowY11 <= -50){X = 158;Y = 550;arrow11.setPosition(X+14, Y-15);arrow11S1.setPosition(X-14, Y-15);arrow11S2.setPosition(X, Y-34);arrow11L.setPosition(X, Y-40);arrow11C.setPosition(X, Y-20);if (addsArrowTicker11 == 0){addsArrowTicker11 = 1;}}  
+    if (arrowY12 > -50){arrowY12+=speedOfGame;arrow12.move(0, speedOfGame);arrow12S1.move(0, speedOfGame);arrow12S2.move(0, speedOfGame);arrow12L.move(0, speedOfGame);arrow12C.move(0, speedOfGame);}
+    if (arrowY12 <= -50){X = 158;Y = 550;arrow12.setPosition(X+14, Y-15);arrow12S1.setPosition(X-14, Y-15);arrow12S2.setPosition(X, Y-34);arrow12L.setPosition(X, Y-40);arrow12C.setPosition(X, Y-20);if (addsArrowTicker12 == 0){addsArrowTicker12 = 1;}}
+    if (arrowY13 > -50){arrowY13+=speedOfGame;arrow13.move(0, speedOfGame);arrow13S1.move(0, speedOfGame);arrow13S2.move(0, speedOfGame);arrow13L.move(0, speedOfGame);arrow13C.move(0, speedOfGame);}
+    if (arrowY13 <= -50){X = 158;Y = 550;arrow13.setPosition(X+14, Y-15);arrow13S1.setPosition(X-14, Y-15);arrow13S2.setPosition(X, Y-34);arrow13L.setPosition(X, Y-40);arrow13C.setPosition(X, Y-20);if (addsArrowTicker13 == 0){addsArrowTicker13 = 1;}}  
+    if (arrowY14 > -50){arrowY14+=speedOfGame;arrow14.move(0, speedOfGame);arrow14S1.move(0, speedOfGame);arrow14S2.move(0, speedOfGame);arrow14L.move(0, speedOfGame);arrow14C.move(0, speedOfGame);}
+    if (arrowY14 <= -50){X = 158;Y = 550;arrow14.setPosition(X+14, Y-15);arrow14S1.setPosition(X-14, Y-15);arrow14S2.setPosition(X, Y-34);arrow14L.setPosition(X, Y-40);arrow14C.setPosition(X, Y-20);if (addsArrowTicker14 == 0){addsArrowTicker14 = 1;}}  
+    if (arrowY15 > -50){arrowY15+=speedOfGame;arrow15.move(0, speedOfGame);arrow15S1.move(0, speedOfGame);arrow15S2.move(0, speedOfGame);arrow15L.move(0, speedOfGame);arrow15C.move(0, speedOfGame);}
+    if (arrowY15 <= -50){X = 158;Y = 550;arrow15.setPosition(X+14, Y-15);arrow15S1.setPosition(X-14, Y-15);arrow15S2.setPosition(X, Y-34);arrow15L.setPosition(X, Y-40);arrow15C.setPosition(X, Y-20);if (addsArrowTicker15 == 0){addsArrowTicker15 = 1;}}  
+    if (arrowY16 > -50){arrowY16+=speedOfGame;arrow16.move(0, speedOfGame);arrow16S1.move(0, speedOfGame);arrow16S2.move(0, speedOfGame);arrow16L.move(0, speedOfGame);arrow16C.move(0, speedOfGame);}
+    if (arrowY16 <= -50){X = 158;Y = 550;arrow16.setPosition(X+14, Y-15);arrow16S1.setPosition(X-14, Y-15);arrow16S2.setPosition(X, Y-34);arrow16L.setPosition(X, Y-40);arrow16C.setPosition(X, Y-20);if (addsArrowTicker16 == 0){addsArrowTicker16 = 1;}}  
+    if (arrowY17 > -50){arrowY17+=speedOfGame;arrow17.move(0, speedOfGame);arrow17S1.move(0, speedOfGame);arrow17S2.move(0, speedOfGame);arrow17L.move(0, speedOfGame);arrow17C.move(0, speedOfGame);}
+    if (arrowY17 <= -50){X = 158;Y = 550;arrow17.setPosition(X+14, Y-15);arrow17S1.setPosition(X-14, Y-15);arrow17S2.setPosition(X, Y-34);arrow17L.setPosition(X, Y-40);arrow17C.setPosition(X, Y-20);if (addsArrowTicker17 == 0){addsArrowTicker17 = 1;}}  
+    if (arrowY18 > -50){arrowY18+=speedOfGame;arrow18.move(0, speedOfGame);arrow18S1.move(0, speedOfGame);arrow18S2.move(0, speedOfGame);arrow18L.move(0, speedOfGame);arrow18C.move(0, speedOfGame);}
+    if (arrowY18 <= -50){X = 158;Y = 550;arrow18.setPosition(X+14, Y-15);arrow18S1.setPosition(X-14, Y-15);arrow18S2.setPosition(X, Y-34);arrow18L.setPosition(X, Y-40);arrow18C.setPosition(X, Y-20);if (addsArrowTicker18 == 0){addsArrowTicker18 = 1;}}  
+    if (arrowY19 > -50){arrowY19+=speedOfGame;arrow19.move(0, speedOfGame);arrow19S1.move(0, speedOfGame);arrow19S2.move(0, speedOfGame);arrow19L.move(0, speedOfGame);arrow19C.move(0, speedOfGame);}
+    if (arrowY19 <= -50){X = 158;Y = 550;arrow19.setPosition(X+14, Y-15);arrow19S1.setPosition(X-14, Y-15);arrow19S2.setPosition(X, Y-34);arrow19L.setPosition(X, Y-40);arrow19C.setPosition(X, Y-20);if (addsArrowTicker19 == 0){addsArrowTicker19 = 1;}}  
+    if (arrowY20 > -50){arrowY20+=speedOfGame;arrow20.move(0, speedOfGame);arrow20S1.move(0, speedOfGame);arrow20S2.move(0, speedOfGame);arrow20L.move(0, speedOfGame);arrow20C.move(0, speedOfGame);}
+    if (arrowY20 <= -50){X = 158;Y = 550;arrow20.setPosition(X+14, Y-15);arrow20S1.setPosition(X-14, Y-15);arrow20S2.setPosition(X, Y-34);arrow20L.setPosition(X, Y-40);arrow20C.setPosition(X, Y-20);if (addsArrowTicker20 == 0){addsArrowTicker20 = 1;}}  
+    if(arrowY21 > -50){arrowY21+=speedOfGame;arrow21.move(0, speedOfGame);arrow21S1.move(0, speedOfGame);arrow21S2.move(0, speedOfGame);arrow21L.move(0, speedOfGame);arrow21C.move(0, speedOfGame);}
+    if (arrowY21 <= -50){X = 242;Y = 510;arrow21.setPosition(X+14, Y-15);arrow21S1.setPosition(X-14, Y-15);arrow21S2.setPosition(X, Y+4);arrow21L.setPosition(X, Y+10);arrow21C.setPosition(X, Y);if (addsArrowTicker21 == 0){addsArrowTicker21 = 1;}}
+    if(arrowY22 > -50){arrowY22+=speedOfGame;arrow22.move(0, speedOfGame);arrow22S1.move(0, speedOfGame);arrow22S2.move(0, speedOfGame);arrow22L.move(0, speedOfGame);arrow22C.move(0, speedOfGame);}
+    if (arrowY22 <= -50){X = 242;Y = 510;arrow22.setPosition(X+14, Y-15);arrow22S1.setPosition(X-14, Y-15);arrow22S2.setPosition(X, Y+4);arrow22L.setPosition(X, Y+10);arrow22C.setPosition(X, Y);if (addsArrowTicker22 == 0){addsArrowTicker22 = 1;}}
+    if(arrowY23 > -50){arrowY23+=speedOfGame;arrow23.move(0, speedOfGame);arrow23S1.move(0, speedOfGame);arrow23S2.move(0, speedOfGame);arrow23L.move(0, speedOfGame);arrow23C.move(0, speedOfGame);}
+    if (arrowY23 <= -50){X = 242;Y = 510;arrow23.setPosition(X+14, Y-15);arrow23S1.setPosition(X-14, Y-15);arrow23S2.setPosition(X, Y+4);arrow23L.setPosition(X, Y+10);arrow23C.setPosition(X, Y);if (addsArrowTicker23 == 0){addsArrowTicker23 = 1;}}
+    if(arrowY24 > -50){arrowY24+=speedOfGame;arrow24.move(0, speedOfGame);arrow24S1.move(0, speedOfGame);arrow24S2.move(0, speedOfGame);arrow24L.move(0, speedOfGame);arrow24C.move(0, speedOfGame);}
+    if (arrowY24 <= -50){X = 242;Y = 510;arrow24.setPosition(X+14, Y-15);arrow24S1.setPosition(X-14, Y-15);arrow24S2.setPosition(X, Y+4);arrow24L.setPosition(X, Y+10);arrow24C.setPosition(X, Y);if (addsArrowTicker24 == 0){addsArrowTicker24 = 1;}}
+    if(arrowY25 > -50){arrowY25+=speedOfGame;arrow25.move(0, speedOfGame);arrow25S1.move(0, speedOfGame);arrow25S2.move(0, speedOfGame);arrow25L.move(0, speedOfGame);arrow25C.move(0, speedOfGame);}
+    if (arrowY25 <= -50){X = 242;Y = 510;arrow25.setPosition(X+14, Y-15);arrow25S1.setPosition(X-14, Y-15);arrow25S2.setPosition(X, Y+4);arrow25L.setPosition(X, Y+10);arrow25C.setPosition(X, Y);if (addsArrowTicker25 == 0){addsArrowTicker25 = 1;}}
+    if(arrowY26 > -50){arrowY26+=speedOfGame;arrow26.move(0, speedOfGame);arrow26S1.move(0, speedOfGame);arrow26S2.move(0, speedOfGame);arrow26L.move(0, speedOfGame);arrow26C.move(0, speedOfGame);}
+    if (arrowY26 <= -50){X = 242;Y = 510;arrow26.setPosition(X+14, Y-15);arrow26S1.setPosition(X-14, Y-15);arrow26S2.setPosition(X, Y+4);arrow26L.setPosition(X, Y+10);arrow26C.setPosition(X, Y);if (addsArrowTicker26 == 0){addsArrowTicker26 = 1;}}
+    if(arrowY27 > -50){arrowY27+=speedOfGame;arrow27.move(0, speedOfGame);arrow27S1.move(0, speedOfGame);arrow27S2.move(0, speedOfGame);arrow27L.move(0, speedOfGame);arrow27C.move(0, speedOfGame);}
+    if (arrowY27 <= -50){X = 242;Y = 510;arrow27.setPosition(X+14, Y-15);arrow27S1.setPosition(X-14, Y-15);arrow27S2.setPosition(X, Y+4);arrow27L.setPosition(X, Y+10);arrow27C.setPosition(X, Y);if (addsArrowTicker27 == 0){addsArrowTicker27 = 1;}}
+    if(arrowY28 > -50){arrowY28+=speedOfGame;arrow28.move(0, speedOfGame);arrow28S1.move(0, speedOfGame);arrow28S2.move(0, speedOfGame);arrow28L.move(0, speedOfGame);arrow28C.move(0, speedOfGame);}
+    if (arrowY28 <= -50){X = 242;Y = 510;arrow28.setPosition(X+14, Y-15);arrow28S1.setPosition(X-14, Y-15);arrow28S2.setPosition(X, Y+4);arrow28L.setPosition(X, Y+10);arrow28C.setPosition(X, Y);if (addsArrowTicker11 == 0){addsArrowTicker11 = 1;}}
+    if(arrowY28 > -50){arrowY28+=speedOfGame;arrow29.move(0, speedOfGame);arrow29S1.move(0, speedOfGame);arrow29S2.move(0, speedOfGame);arrow29L.move(0, speedOfGame);arrow29C.move(0, speedOfGame);}
+    if (arrowY29 <= -50){X = 242;Y = 510;arrow29.setPosition(X+14, Y-15);arrow29S1.setPosition(X-14, Y-15);arrow29S2.setPosition(X, Y+4);arrow29L.setPosition(X, Y+10);arrow29C.setPosition(X, Y);if (addsArrowTicker29 == 0){addsArrowTicker29 = 1;}}
+    if(arrowY30 > -50){arrowY30+=speedOfGame;arrow30.move(0, speedOfGame);arrow30S1.move(0, speedOfGame);arrow30S2.move(0, speedOfGame);arrow30L.move(0, speedOfGame);arrow30C.move(0, speedOfGame);}
+    if (arrowY30 <= -50){X = 242;Y = 510;arrow30.setPosition(X+14, Y-15);arrow30S1.setPosition(X-14, Y-15);arrow30S2.setPosition(X, Y+4);arrow30L.setPosition(X, Y+10);arrow30C.setPosition(X, Y);if (addsArrowTicker30 == 0){addsArrowTicker30 = 1;}}
+    if(arrowY31 > -50){arrowY31+=speedOfGame;arrow31.move(0, speedOfGame);arrow31S1.move(0, speedOfGame);arrow31S2.move(0, speedOfGame);arrow31L.move(0, speedOfGame);arrow31C.move(0, speedOfGame);}
+    if (arrowY31 <= -50){X = 360;Y = 510;arrow31.setPosition(X, Y);arrow31S1.setPosition(X, Y+25);arrow31S2.setPosition(X-20, Y+13);arrow31L.setPosition(X-30, Y+12);arrow31C.setPosition(X-10, Y+10);if (addsArrowTicker31 == 0){addsArrowTicker31 = 1;}}
+    if(arrowY32 > -50){arrowY32+=speedOfGame;arrow32.move(0, speedOfGame);arrow32S1.move(0, speedOfGame);arrow32S2.move(0, speedOfGame);arrow32L.move(0, speedOfGame);arrow32C.move(0, speedOfGame);}
+    if (arrowY32 <= -50){X = 360;Y = 510;arrow32.setPosition(X, Y);arrow32S1.setPosition(X, Y+25);arrow32S2.setPosition(X-20, Y+13);arrow32L.setPosition(X-30, Y+12);arrow32C.setPosition(X-10, Y+10);if (addsArrowTicker32 == 0){addsArrowTicker32 = 1;}}
+    if(arrowY33 > -50){arrowY33+=speedOfGame;arrow33.move(0, speedOfGame);arrow33S1.move(0, speedOfGame);arrow33S2.move(0, speedOfGame);arrow33L.move(0, speedOfGame);arrow33C.move(0, speedOfGame);}
+    if (arrowY33 <= -50){X = 360;Y = 510;arrow33.setPosition(X, Y);arrow33S1.setPosition(X, Y+25);arrow33S2.setPosition(X-20, Y+13);arrow33L.setPosition(X-30, Y+12);arrow33C.setPosition(X-10, Y+10);if (addsArrowTicker33 == 0){addsArrowTicker33 = 1;}}
+    if(arrowY34 > -50){arrowY34+=speedOfGame;arrow34.move(0, speedOfGame);arrow34S1.move(0, speedOfGame);arrow34S2.move(0, speedOfGame);arrow34L.move(0, speedOfGame);arrow34C.move(0, speedOfGame);}
+    if (arrowY34 <= -50){X = 360;Y = 510;arrow34.setPosition(X, Y);arrow34S1.setPosition(X, Y+25);arrow34S2.setPosition(X-20, Y+13);arrow34L.setPosition(X-30, Y+12);arrow34C.setPosition(X-10, Y+10);if (addsArrowTicker34 == 0){addsArrowTicker34 = 1;}}
+    if(arrowY35 > -50){arrowY35+=speedOfGame;arrow35.move(0, speedOfGame);arrow35S1.move(0, speedOfGame);arrow35S2.move(0, speedOfGame);arrow35L.move(0, speedOfGame);arrow35C.move(0, speedOfGame);}
+    if (arrowY35 <= -50){X = 360;Y = 510;arrow35.setPosition(X, Y);arrow35S1.setPosition(X, Y+25);arrow35S2.setPosition(X-20, Y+13);arrow35L.setPosition(X-30, Y+12);arrow35C.setPosition(X-10, Y+10);if (addsArrowTicker35 == 0){addsArrowTicker35 = 1;}}
+    if(arrowY35 > -50){arrowY36+=speedOfGame;arrow36.move(0, speedOfGame);arrow36S1.move(0, speedOfGame);arrow36S2.move(0, speedOfGame);arrow36L.move(0, speedOfGame);arrow36C.move(0, speedOfGame);}
+    if (arrowY36 <= -50){X = 360;Y = 510;arrow36.setPosition(X, Y);arrow36S1.setPosition(X, Y+25);arrow36S2.setPosition(X-20, Y+13);arrow36L.setPosition(X-30, Y+12);arrow36C.setPosition(X-10, Y+10);if (addsArrowTicker36 == 0){addsArrowTicker36 = 1;}}
+    if(arrowY36 > -50){arrowY37+=speedOfGame;arrow37.move(0, speedOfGame);arrow37S1.move(0, speedOfGame);arrow37S2.move(0, speedOfGame);arrow37L.move(0, speedOfGame);arrow37C.move(0, speedOfGame);}
+    if (arrowY37 <= -50){X = 360;Y = 510;arrow37.setPosition(X, Y);arrow37S1.setPosition(X, Y+25);arrow37S2.setPosition(X-20, Y+13);arrow37L.setPosition(X-30, Y+12);arrow37C.setPosition(X-10, Y+10);if (addsArrowTicker37 == 0){addsArrowTicker37 = 1;}}
+    if(arrowY37 > -50){arrowY38+=speedOfGame;arrow38.move(0, speedOfGame);arrow38S1.move(0, speedOfGame);arrow38S2.move(0, speedOfGame);arrow38L.move(0, speedOfGame);arrow38C.move(0, speedOfGame);}
+    if(arrowY38 <= -50){X = 360;Y = 510;arrow38.setPosition(X, Y);arrow38S1.setPosition(X, Y+25);arrow38S2.setPosition(X-20, Y+13);arrow38L.setPosition(X-30, Y+12);arrow38C.setPosition(X-10, Y+10);if(addsArrowTicker38 == 0){addsArrowTicker38 = 1;}}
+    if(arrowY39 > -50){arrowY39+=speedOfGame;arrow39.move(0, speedOfGame);arrow39S1.move(0, speedOfGame);arrow39S2.move(0, speedOfGame);arrow39L.move(0, speedOfGame);arrow39C.move(0, speedOfGame);}
+    if (arrowY39 <= -50){X = 360;Y = 510;arrow39.setPosition(X, Y);arrow39S1.setPosition(X, Y+25);arrow39S2.setPosition(X-20, Y+13);arrow39L.setPosition(X-30, Y+12);arrow39C.setPosition(X-10, Y+10);if (addsArrowTicker39 == 0){addsArrowTicker39 = 1;}}
+    if(arrowY40 > -50){arrowY40+=speedOfGame;arrow40.move(0, speedOfGame);arrow40S1.move(0, speedOfGame);arrow40S2.move(0, speedOfGame);arrow40L.move(0, speedOfGame);arrow40C.move(0, speedOfGame);}
+    if (arrowY40 <= -50){X = 360;Y = 510;arrow40.setPosition(X, Y);arrow40S1.setPosition(X, Y+25);arrow40S2.setPosition(X-20, Y+13);arrow40L.setPosition(X-30, Y+12);arrow40C.setPosition(X-10, Y+10);if (addsArrowTicker40 == 0){addsArrowTicker40 = 1;}}
+}
+
+
+
+
+function arrows(X1,Y1, Rota1, fill){ // left 1
+    if (Rota1 == 0){
+        arrow = new Oval(50, 15);arrow.setPosition(X1, Y1);arrow.setColor(fill);arrow.rotate(-35);
+        add(arrow);
+        
+        arrowS1 = new Oval(50, 15);arrowS1.setPosition(X1, Y1+25);arrowS1.setColor(fill);arrowS1.rotate(35);
+        add(arrowS1);
+        
+        arrowS2 = new Oval(55, 15);arrowS2.setPosition(X1+20, Y1+13);arrowS2.setColor(fill);
+        add(arrowS2);
+        
+        arrowL = new Oval(75, 20);arrowL.setPosition(X1+30, Y1+12);arrowL.setColor(fill);
+        add(arrowL);
+        
+        arrowC = new Oval(20, 40);arrowC.setPosition(X1+10, Y1+10);arrowC.setColor(fill);
+        add(arrowC);
+        
+        arrowS2.rotate(90);arrowS1.rotate(180);arrow.rotate(180);}
+    if (Rota1 == 90){
+        arrow = new Oval(50, 15);arrow.setPosition(X1+14, Y1-15);arrow.setColor(fill);arrow.rotate(-35);
+        add(arrow);
+        
+        arrowS1 = new Oval(50, 15);arrowS1.setPosition(X1-14, Y1-15);arrowS1.setColor(fill);arrowS1.rotate(35);
+        add(arrowS1);
+        
+        arrowS2 = new Oval(55, 15);arrowS2.setPosition(X1, Y1+4);arrowS2.setColor(fill);
+        add(arrowS2);
+        
+        arrowL = new Oval(75, 20);arrowL.setPosition(X1, Y1+10);arrowL.setColor(fill);
+        add(arrowL);
+        
+        arrowC = new Oval(20, 40);arrowC.setPosition(X1, Y1);arrowC.setColor(fill);
+        add(arrowC);
+        
+        arrowS2.rotate(180);arrowS1.rotate(270);arrow.rotate(270);arrowL.rotate(90);arrowC.rotate(90);}
+    if (Rota1 == 180){
+        arrow = new Oval(50, 15);arrow.setPosition(X1, Y1);arrow.setColor(fill);arrow.rotate(-35);
+        add(arrow);
+        
+        arrowS1 = new Oval(50, 15);arrowS1.setPosition(X1, Y1+25);arrowS1.setColor(fill);arrowS1.rotate(35);
+        add(arrowS1);
+        
+        arrowS2 = new Oval(55, 15);arrowS2.setPosition(X1-20, Y1+13);arrowS2.setColor(fill);
+        add(arrowS2);
+        
+        arrowL = new Oval(75, 20);arrowL.setPosition(X1-30, Y1+12);arrowL.setColor(fill);
+        add(arrowL);
+        
+        arrowC = new Oval(20, 40);arrowC.setPosition(X1-10, Y1+10);arrowC.setColor(fill);
+        add(arrowC);
+
+        arrowS2.rotate(90);arrowS1.rotate(110);arrow.rotate(250);}
+    if (Rota1 == 270){
+        arrow = new Oval(50, 15);arrow.setPosition(X1+14, Y1-15);arrow.setColor(fill);arrow.rotate(-35);
+        add(arrow);
+        
+        arrowS1 = new Oval(50, 15);arrowS1.setPosition(X1-14, Y1-15);arrowS1.setColor(fill);arrowS1.rotate(35);
+        add(arrowS1);
+        
+        arrowS2 = new Oval(58, 15);arrowS2.setPosition(X1, Y1-34);arrowS2.setColor(fill);
+        add(arrowS2);
+        
+        arrowL = new Oval(75, 20);arrowL.setPosition(X1, Y1-40);arrowL.setColor(fill);
+        add(arrowL);
+        
+        arrowC = new Oval(20, 40);arrowC.setPosition(X1, Y1-20);arrowC.setColor(fill);
+        add(arrowC);
+        
+        arrowS2.rotate(0);arrowS1.rotate(200);arrow.rotate(160);arrowL.rotate(90);arrowC.rotate(90);
+    }
+}
+
+function arrows2(X,Y, Rota1, fill){if (Rota1 == 0){
+        arrow2 = new Oval(50, 15);arrow2.setPosition(X, Y);arrow2.setColor(fill);arrow2.rotate(-35);
+        add(arrow2);
+        
+        arrow2S1 = new Oval(50, 15);arrow2S1.setPosition(X, Y+25);arrow2S1.setColor(fill);arrow2S1.rotate(35);
+        add(arrow2S1);
+        
+        arrow2S2 = new Oval(55, 15); arrow2S2.setPosition(X+20, Y+13); arrow2S2.setColor(fill);
+        add(arrow2S2);
+        
+        arrow2L = new Oval(75, 20);arrow2L.setPosition(X+30, Y+12);arrow2L.setColor(fill);
+        add(arrow2L);
+        
+        arrow2C = new Oval(20, 40);arrow2C.setPosition(X+10, Y+10);arrow2C.setColor(fill);
+        add(arrow2C);
+    
+        arrow2S2.rotate(90);arrow2S1.rotate(180);arrow2.rotate(180);}}
+function arrows3(X,Y, Rota1, fill){if (Rota1 == 0){
+        arrow3 = new Oval(50, 15);arrow3.setPosition(X, Y);arrow3.setColor(fill);arrow3.rotate(-35);
+        add(arrow3);
+        
+        arrow3S1 = new Oval(50, 15);arrow3S1.setPosition(X, Y+25);arrow3S1.setColor(fill);arrow3S1.rotate(35);
+        add(arrow3S1);
+        
+        arrow3S2 = new Oval(55, 15);arrow3S2.setPosition(X+20, Y+13);arrow3S2.setColor(fill);
+        add(arrow3S2);
+        
+        arrow3L = new Oval(75, 20);arrow3L.setPosition(X+30, Y+12);arrow3L.setColor(fill);
+        add(arrow3L);
+        
+        arrow3C = new Oval(20, 40);arrow3C.setPosition(X+10, Y+10);arrow3C.setColor(fill);
+        add(arrow3C);
+        
+        arrow3S2.rotate(90);arrow3S1.rotate(180);arrow3.rotate(180);}}
+function arrows4(X,Y, Rota1, fill){if (Rota1 == 0){
+        arrow4 = new Oval(50, 15);arrow4.setPosition(X, Y);arrow4.setColor(fill);arrow4.rotate(-35);
+        add(arrow4);
+        
+        arrow4S1 = new Oval(50, 15);arrow4S1.setPosition(X, Y+25);arrow4S1.setColor(fill);arrow4S1.rotate(35);
+        add(arrow4S1);
+        
+        arrow4S2 = new Oval(55, 15);arrow4S2.setPosition(X+20, Y+13);arrow4S2.setColor(fill);
+        add(arrow4S2);
+        
+        arrow4L = new Oval(75, 20);arrow4L.setPosition(X+30, Y+12);arrow4L.setColor(fill);
+        add(arrow4L);
+        
+        arrow4C = new Oval(20, 40);arrow4C.setPosition(X+10, Y+10);arrow4C.setColor(fill);
+        add(arrow4C);
+        
+        arrow4S2.rotate(90);arrow4S1.rotate(180);arrow4.rotate(180);}}
+function arrows5(X,Y, Rota1, fill){if (Rota1 == 0){
+        arrow5 = new Oval(50, 15);arrow5.setPosition(X, Y);arrow5.setColor(fill);arrow5.rotate(-35);
+        add(arrow5);
+        
+        arrow5S1 = new Oval(50, 15);arrow5S1.setPosition(X, Y+25);arrow5S1.setColor(fill);arrow5S1.rotate(35);
+        add(arrow5S1);
+        
+        arrow5S2 = new Oval(55, 15);arrow5S2.setPosition(X+20, Y+13);arrow5S2.setColor(fill);
+        add(arrow5S2);
+        
+        arrow5L = new Oval(75, 20);arrow5L.setPosition(X+30, Y+12);arrow5L.setColor(fill);
+        add(arrow5L);
+        
+        arrow5C = new Oval(20, 40);arrow5C.setPosition(X+10, Y+10);arrow5C.setColor(fill);
+        add(arrow5C);
+        
+        arrow5S2.rotate(90);arrow5S1.rotate(180);arrow5.rotate(180);}}
+function arrows6(X,Y,Rota1,fill){if (Rota1 == 0){
+        arrow6 = new Oval(50, 15);arrow6.setPosition(X, Y);arrow6.setColor(fill);arrow6.rotate(-35);
+        add(arrow6);
+        
+        arrow6S1 = new Oval(50, 15);arrow6S1.setPosition(X, Y+25);arrow6S1.setColor(fill);arrow6S1.rotate(35);
+        add(arrow6S1);
+        
+        arrow6S2 = new Oval(55, 15);arrow6S2.setPosition(X+20, Y+13);arrow6S2.setColor(fill);
+        add(arrow6S2);
+        
+        arrow6L = new Oval(75, 20);arrow6L.setPosition(X+30, Y+12);arrow6L.setColor(fill);
+        add(arrow6L);
+        
+        arrow6C = new Oval(20, 40);arrow6C.setPosition(X+10, Y+10);arrow6C.setColor(fill);
+        add(arrow6C);
+        
+        arrow6S2.rotate(90);arrow6S1.rotate(180);arrow6.rotate(180);}}
+function arrows7(X,Y,Rota1,fill){if (Rota1 == 0){
+        arrow7 = new Oval(50, 15);arrow7.setPosition(X, Y);arrow7.setColor(fill);arrow7.rotate(-35);
+        add(arrow7);
+        
+        arrow7S1 = new Oval(50, 15);arrow7S1.setPosition(X, Y+25);arrow7S1.setColor(fill);arrow7S1.rotate(35);
+        add(arrow7S1);
+        
+        arrow7S2 = new Oval(55, 15);arrow7S2.setPosition(X+20, Y+13);arrow7S2.setColor(fill);
+        add(arrow7S2);
+        
+        arrow7L = new Oval(75, 20);arrow7L.setPosition(X+30, Y+12);arrow7L.setColor(fill);
+        add(arrow7L);
+        
+        arrow7C = new Oval(20, 40);arrow7C.setPosition(X+10, Y+10);arrow7C.setColor(fill);
+        add(arrow7C);
+        
+        arrow7S2.rotate(90);arrow7S1.rotate(180);arrow7.rotate(180);}}
+function arrows8(X,Y,Rota1,fill){if (Rota1 == 0){
+        arrow8 = new Oval(50, 15);arrow8.setPosition(X, Y);arrow8.setColor(fill);arrow8.rotate(-35);
+        add(arrow8);
+        
+        arrow8S1 = new Oval(50, 15);arrow8S1.setPosition(X, Y+25);arrow8S1.setColor(fill);arrow8S1.rotate(35);
+        add(arrow8S1);
+        
+        arrow8S2 = new Oval(55, 15);arrow8S2.setPosition(X+20, Y+13);arrow8S2.setColor(fill);
+        add(arrow8S2);
+        
+        arrow8L = new Oval(75, 20);arrow8L.setPosition(X+30, Y+12);arrow8L.setColor(fill);
+        add(arrow8L);
+        
+        arrow8C = new Oval(20, 40);arrow8C.setPosition(X+10, Y+10);arrow8C.setColor(fill);
+        add(arrow8C);
+        
+        arrow8S2.rotate(90);arrow8S1.rotate(180);arrow8.rotate(180);}}
+function arrows9(X,Y,Rota1,fill){if (Rota1 == 0){
+        arrow9 = new Oval(50, 15);arrow9.setPosition(X, Y);arrow9.setColor(fill);arrow9.rotate(-35);
+        add(arrow9);
+        
+        arrow9S1 = new Oval(50, 15);arrow9S1.setPosition(X, Y+25);arrow9S1.setColor(fill);arrow9S1.rotate(35);
+        add(arrow9S1);
+        
+        arrow9S2 = new Oval(55, 15);arrow9S2.setPosition(X+20, Y+13);arrow9S2.setColor(fill);
+        add(arrow9S2);
+        
+        arrow9L = new Oval(75, 20);arrow9L.setPosition(X+30, Y+12);arrow9L.setColor(fill);
+        add(arrow9L);
+        
+        arrow9C = new Oval(20, 40);arrow9C.setPosition(X+10, Y+10);arrow9C.setColor(fill);
+        add(arrow9C);
+        
+        arrow9S2.rotate(90);arrow9S1.rotate(180);arrow9.rotate(180);}}
+function arrows10(X,Y,Rota1,fill){if (Rota1 == 0){
+        arrow10 = new Oval(50, 15);arrow10.setPosition(X, Y);arrow10.setColor(fill);arrow10.rotate(-35);
+        add(arrow10);
+        
+        arrow10S1 = new Oval(50, 15);arrow10S1.setPosition(X, Y+25);arrow10S1.setColor(fill);arrow10S1.rotate(35);
+        add(arrow10S1);
+        
+        arrow10S2 = new Oval(55, 15);arrow10S2.setPosition(X+20, Y+13);arrow10S2.setColor(fill);
+        add(arrow10S2);
+        
+        arrow10L = new Oval(75, 20);arrow10L.setPosition(X+30, Y+12);arrow10L.setColor(fill);
+        add(arrow10L);
+        
+        arrow10C = new Oval(20, 40);arrow10C.setPosition(X+10, Y+10);arrow10C.setColor(fill);
+        add(arrow10C);
+        
+        arrow10S2.rotate(90);arrow10S1.rotate(180);arrow10.rotate(180);}}
+function arrows11(X,Y,Rota1,fill){if (Rota1 == 270){
+        arrow11 = new Oval(50, 15);arrow11.setPosition(X+14, Y-15);arrow11.setColor(fill);arrow11.rotate(-35);
+        add(arrow11);
+        
+        arrow11S1 = new Oval(50, 15);arrow11S1.setPosition(X-14, Y-15);arrow11S1.setColor(fill);arrow11S1.rotate(35);
+        add(arrow11S1);
+        
+        arrow11S2 = new Oval(58, 15);arrow11S2.setPosition(X, Y-34);arrow11S2.setColor(fill);
+        add(arrow11S2);
+        
+        arrow11L = new Oval(75, 20);arrow11L.setPosition(X, Y-40);arrow11L.setColor(fill);
+        add(arrow11L);
+        
+        arrow11C = new Oval(20, 40);arrow11C.setPosition(X, Y-20);arrow11C.setColor(fill);
+        add(arrow11C);
+        
+        arrow11S2.rotate(0); arrow11S1.rotate(200);arrow11.rotate(160);arrow11L.rotate(90);arrow11C.rotate(90);
+}}
+function arrows12(X,Y,Rota1,fill){if (Rota1 == 270){
+        arrow12 = new Oval(50, 15);arrow12.setPosition(X+14, Y-15);arrow12.setColor(fill);arrow12.rotate(-35);
+        add(arrow12);
+        
+        arrow12S1 = new Oval(50, 15);arrow12S1.setPosition(X-14, Y-15);arrow12S1.setColor(fill);arrow12S1.rotate(35);
+        add(arrow12S1);
+        
+        arrow12S2 = new Oval(58, 15);arrow12S2.setPosition(X, Y-34);arrow12S2.setColor(fill);
+        add(arrow12S2);
+        
+        arrow12L = new Oval(75, 20);arrow12L.setPosition(X, Y-40);arrow12L.setColor(fill);
+        add(arrow12L);
+        
+        arrow12C = new Oval(20, 40);arrow12C.setPosition(X, Y-20);arrow12C.setColor(fill);
+        add(arrow12C);
+        
+        arrow12S2.rotate(0); arrow12S1.rotate(200);arrow12.rotate(160);arrow12L.rotate(90);arrow12C.rotate(90);
+}}
+function arrows13(X,Y,Rota1,fill){if (Rota1 == 270){
+        arrow13 = new Oval(50, 15);arrow13.setPosition(X+14, Y-15);arrow13.setColor(fill);arrow13.rotate(-35);
+        add(arrow13);
+        
+        arrow13S1 = new Oval(50, 15);arrow13S1.setPosition(X-14, Y-15);arrow13S1.setColor(fill);arrow13S1.rotate(35);
+        add(arrow13S1);
+        
+        arrow13S2 = new Oval(58, 15);arrow13S2.setPosition(X, Y-34);arrow13S2.setColor(fill);
+        add(arrow13S2);
+        
+        arrow13L = new Oval(75, 20);arrow13L.setPosition(X, Y-40);arrow13L.setColor(fill);
+        add(arrow13L);
+        
+        arrow13C = new Oval(20, 40);arrow13C.setPosition(X, Y-20);arrow13C.setColor(fill);
+        add(arrow13C);
+        
+        arrow13S2.rotate(0); arrow13S1.rotate(200);arrow13.rotate(160);arrow13L.rotate(90);arrow13C.rotate(90);
+}}
+function arrows14(X,Y,Rota1,fill){if (Rota1 == 270){
+        arrow14 = new Oval(50, 15);arrow14.setPosition(X+14, Y-15);arrow14.setColor(fill);arrow14.rotate(-35);
+        add(arrow14);
+        
+        arrow14S1 = new Oval(50, 15);arrow14S1.setPosition(X-14, Y-15);arrow14S1.setColor(fill);arrow14S1.rotate(35);
+        add(arrow14S1);
+        
+        arrow14S2 = new Oval(58, 15);arrow14S2.setPosition(X, Y-34);arrow14S2.setColor(fill);
+        add(arrow14S2);
+        
+        arrow14L = new Oval(75, 20);arrow14L.setPosition(X, Y-40);arrow14L.setColor(fill);
+        add(arrow14L);
+        
+        arrow14C = new Oval(20, 40);arrow14C.setPosition(X, Y-20);arrow14C.setColor(fill);
+        add(arrow14C);
+        
+        arrow14S2.rotate(0); arrow14S1.rotate(200);arrow14.rotate(160);arrow14L.rotate(90);arrow14C.rotate(90);
+}}
+function arrows15(X,Y,Rota1,fill){if (Rota1 == 270){
+        arrow15 = new Oval(50, 15);arrow15.setPosition(X+14, Y-15);arrow15.setColor(fill);arrow15.rotate(-35);
+        add(arrow15);
+        
+        arrow15S1 = new Oval(50, 15);arrow15S1.setPosition(X-14, Y-15);arrow15S1.setColor(fill);arrow15S1.rotate(35);
+        add(arrow15S1);
+        
+        arrow15S2 = new Oval(58, 15);arrow15S2.setPosition(X, Y-34);arrow15S2.setColor(fill);
+        add(arrow15S2);
+        
+        arrow15L = new Oval(75, 20);arrow15L.setPosition(X, Y-40);arrow15L.setColor(fill);
+        add(arrow15L);
+        
+        arrow15C = new Oval(20, 40);arrow15C.setPosition(X, Y-20);arrow15C.setColor(fill);
+        add(arrow15C);
+        
+        arrow15S2.rotate(0); arrow15S1.rotate(200);arrow15.rotate(160);arrow15L.rotate(90);arrow15C.rotate(90);
+}}
+function arrows16(X,Y,Rota1,fill){if (Rota1 == 270){
+        arrow16 = new Oval(50, 15);arrow16.setPosition(X+14, Y-15);arrow16.setColor(fill);arrow16.rotate(-35);
+        add(arrow16);
+        
+        arrow16S1 = new Oval(50, 15);arrow16S1.setPosition(X-14, Y-15);arrow16S1.setColor(fill);arrow16S1.rotate(35);
+        add(arrow16S1);
+        
+        arrow16S2 = new Oval(58, 15);arrow16S2.setPosition(X, Y-34);arrow16S2.setColor(fill);
+        add(arrow16S2);
+        
+        arrow16L = new Oval(75, 20);arrow16L.setPosition(X, Y-40);arrow16L.setColor(fill);
+        add(arrow16L);
+        
+        arrow16C = new Oval(20, 40);arrow16C.setPosition(X, Y-20);arrow16C.setColor(fill);
+        add(arrow16C);
+        
+        arrow16S2.rotate(0); arrow16S1.rotate(200);arrow16.rotate(160);arrow16L.rotate(90);arrow16C.rotate(90);
+}}
+function arrows17(X,Y,Rota1,fill){if (Rota1 == 270){
+        arrow17 = new Oval(50, 15);arrow17.setPosition(X+14, Y-15);arrow17.setColor(fill);arrow17.rotate(-35);
+        add(arrow17);
+        
+        arrow17S1 = new Oval(50, 15);arrow17S1.setPosition(X-14, Y-15);arrow17S1.setColor(fill);arrow17S1.rotate(35);
+        add(arrow17S1);
+        
+        arrow17S2 = new Oval(58, 15);arrow17S2.setPosition(X, Y-34);arrow17S2.setColor(fill);
+        add(arrow17S2);
+        
+        arrow17L = new Oval(75, 20);arrow17L.setPosition(X, Y-40);arrow17L.setColor(fill);
+        add(arrow17L);
+        
+        arrow17C = new Oval(20, 40);arrow17C.setPosition(X, Y-20);arrow17C.setColor(fill);
+        add(arrow17C);
+        
+        arrow17S2.rotate(0);arrow17S1.rotate(200);arrow17.rotate(160);arrow17L.rotate(90);arrow17C.rotate(90);
+}}
+function arrows18(X,Y,Rota1,fill){if (Rota1 == 270){
+        arrow18 = new Oval(50, 15);arrow18.setPosition(X+14, Y-15);arrow18.setColor(fill);arrow18.rotate(-35);
+        add(arrow18);
+        
+        arrow18S1 = new Oval(50, 15);arrow18S1.setPosition(X-14, Y-15);arrow18S1.setColor(fill);arrow18S1.rotate(35);
+        add(arrow18S1);
+        
+        arrow18S2 = new Oval(58, 15);arrow18S2.setPosition(X, Y-34);arrow18S2.setColor(fill);
+        add(arrow18S2);
+        
+        arrow18L = new Oval(75, 20);arrow18L.setPosition(X, Y-40);arrow18L.setColor(fill);
+        add(arrow18L);
+        
+        arrow18C = new Oval(20, 40);arrow18C.setPosition(X, Y-20);arrow18C.setColor(fill);
+        add(arrow18C);
+        
+        arrow18S2.rotate(0); arrow18S1.rotate(200);arrow18.rotate(160);arrow18L.rotate(90);arrow18C.rotate(90);
+}}
+function arrows19(X,Y,Rota1,fill){if (Rota1 == 270){
+        arrow19 = new Oval(50, 15);arrow19.setPosition(X+14, Y-15);arrow19.setColor(fill);arrow19.rotate(-35);
+        add(arrow19);
+        
+        arrow19S1 = new Oval(50, 15);arrow19S1.setPosition(X-14, Y-15);arrow19S1.setColor(fill);arrow19S1.rotate(35);
+        add(arrow19S1);
+        
+        arrow19S2 = new Oval(58, 15);arrow19S2.setPosition(X, Y-34);arrow19S2.setColor(fill);
+        add(arrow19S2);
+        
+        arrow19L = new Oval(75, 20);arrow19L.setPosition(X, Y-40);arrow19L.setColor(fill);
+        add(arrow19L);
+        
+        arrow19C = new Oval(20, 40);arrow19C.setPosition(X, Y-20);arrow19C.setColor(fill);
+        add(arrow19C);
+        
+        arrow19S2.rotate(0); arrow19S1.rotate(200);arrow19.rotate(160);arrow19L.rotate(90);arrow19C.rotate(90);
+}}
+function arrows20(X,Y,Rota1,fill){if (Rota1 == 270){
+        arrow20 = new Oval(50, 15);arrow20.setPosition(X+14, Y-15);arrow20.setColor(fill);arrow20.rotate(-35);
+        add(arrow20);
+        
+        arrow20S1 = new Oval(50, 15);arrow20S1.setPosition(X-14, Y-15);arrow20S1.setColor(fill);arrow20S1.rotate(35);
+        add(arrow20S1);
+        
+        arrow20S2 = new Oval(58, 15);arrow20S2.setPosition(X, Y-34);arrow20S2.setColor(fill);
+        add(arrow20S2);
+        
+        arrow20L = new Oval(75, 20);arrow20L.setPosition(X, Y-40);arrow20L.setColor(fill);
+        add(arrow20L);
+        
+        arrow20C = new Oval(20, 40);arrow20C.setPosition(X, Y-20);arrow20C.setColor(fill);
+        add(arrow20C);
+        
+        arrow20S2.rotate(0); arrow20S1.rotate(200);arrow20.rotate(160);arrow20L.rotate(90);arrow20C.rotate(90);
+}}
+function arrows21(X,Y,Rota1,fill){if (Rota1 == 90){
+        arrow21 = new Oval(50, 15);arrow21.setPosition(X+14, Y-15);arrow21.setColor(fill);arrow21.rotate(-35);    
+        add(arrow21);
+        
+        arrow21S1 = new Oval(50, 15);arrow21S1.setPosition(X-14, Y-15);arrow21S1.setColor(fill);arrow21S1.rotate(35);   
+        add(arrow21S1);
+        
+        arrow21S2 = new Oval(55, 15);arrow21S2.setPosition(X, Y+4);arrow21S2.setColor(fill);   
+        add(arrow21S2);
+        
+        arrow21L = new Oval(75, 20);arrow21L.setPosition(X, Y+10);arrow21L.setColor(fill);    
+        add(arrow21L);
+        
+        arrow21C = new Oval(20, 40);arrow21C.setPosition(X, Y);arrow21C.setColor(fill);    
+        add(arrow21C);
+        
+        arrow21S2.rotate(180);arrow21S1.rotate(270);arrow21.rotate(270);arrow21L.rotate(90);arrow21C.rotate(90);}}
+function arrows22(X,Y,Rota1,fill){if (Rota1 == 90){
+        arrow22 = new Oval(50, 15);arrow22.setPosition(X+14, Y-15);arrow22.setColor(fill);arrow22.rotate(-35);    
+        add(arrow22);
+        
+        arrow22S1 = new Oval(50, 15);arrow22S1.setPosition(X-14, Y-15);arrow22S1.setColor(fill);arrow22S1.rotate(35);   
+        add(arrow22S1);
+        
+        arrow22S2 = new Oval(55, 15);arrow22S2.setPosition(X, Y+4);arrow22S2.setColor(fill);   
+        add(arrow22S2);
+        
+        arrow22L = new Oval(75, 20);arrow22L.setPosition(X, Y+10);arrow22L.setColor(fill);    
+        add(arrow22L);
+        
+        arrow22C = new Oval(20, 40);arrow22C.setPosition(X, Y);arrow22C.setColor(fill);    
+        add(arrow22C);
+        
+        arrow22S2.rotate(180);arrow22S1.rotate(270);arrow22.rotate(270);arrow22L.rotate(90);arrow22C.rotate(90);}}
+function arrows23(X,Y,Rota1,fill){if (Rota1 == 90){
+        arrow23 = new Oval(50, 15);arrow23.setPosition(X+14, Y-15);arrow23.setColor(fill);arrow23.rotate(-35);    
+        add(arrow23);
+        
+        arrow23S1 = new Oval(50, 15);arrow23S1.setPosition(X-14, Y-15);arrow23S1.setColor(fill);arrow23S1.rotate(35);   
+        add(arrow23S1);
+        
+        arrow23S2 = new Oval(55, 15);arrow23S2.setPosition(X, Y+4);arrow23S2.setColor(fill);   
+        add(arrow23S2);
+        
+        arrow23L = new Oval(75, 20);arrow23L.setPosition(X, Y+10);arrow23L.setColor(fill);    
+        add(arrow23L);
+        
+        arrow23C = new Oval(20, 40);arrow23C.setPosition(X, Y);arrow23C.setColor(fill);    
+        add(arrow23C);
+        
+        arrow23S2.rotate(180);arrow23S1.rotate(270);arrow23.rotate(270);arrow23L.rotate(90);arrow23C.rotate(90);}}
+function arrows24(X,Y,Rota1,fill){if (Rota1 == 90){
+        arrow24 = new Oval(50, 15);arrow24.setPosition(X+14, Y-15);arrow24.setColor(fill);arrow24.rotate(-35);    
+        add(arrow24);
+        
+        arrow24S1 = new Oval(50, 15);arrow24S1.setPosition(X-14, Y-15);arrow24S1.setColor(fill);arrow24S1.rotate(35);   
+        add(arrow24S1);
+        
+        arrow24S2 = new Oval(55, 15);arrow24S2.setPosition(X, Y+4);arrow24S2.setColor(fill);   
+        add(arrow24S2);
+        
+        arrow24L = new Oval(75, 20);arrow24L.setPosition(X, Y+10);arrow24L.setColor(fill);    
+        add(arrow24L);
+        
+        arrow24C = new Oval(20, 40);arrow24C.setPosition(X, Y);arrow24C.setColor(fill);    
+        add(arrow24C);
+        
+        arrow24S2.rotate(180);arrow24S1.rotate(270);arrow24.rotate(270);arrow24L.rotate(90);arrow24C.rotate(90);}}
+function arrows25(X,Y,Rota1,fill){if (Rota1 == 90){
+        arrow25 = new Oval(50, 15);arrow25.setPosition(X+14, Y-15);arrow25.setColor(fill);arrow25.rotate(-35);    
+        add(arrow25);
+        
+        arrow25S1 = new Oval(50, 15);arrow25S1.setPosition(X-14, Y-15);arrow25S1.setColor(fill);arrow25S1.rotate(35);   
+        add(arrow25S1);
+        
+        arrow25S2 = new Oval(55, 15);arrow25S2.setPosition(X, Y+4);arrow25S2.setColor(fill);   
+        add(arrow25S2);
+        
+        arrow25L = new Oval(75, 20);arrow25L.setPosition(X, Y+10);arrow25L.setColor(fill);    
+        add(arrow25L);
+        
+        arrow25C = new Oval(20, 40);arrow25C.setPosition(X, Y);arrow25C.setColor(fill);    
+        add(arrow25C);
+        
+        arrow25S2.rotate(180);arrow25S1.rotate(270);arrow25.rotate(270);arrow25L.rotate(90);arrow25C.rotate(90);}}
+function arrows26(X,Y,Rota1,fill){if (Rota1 == 90){
+        arrow26 = new Oval(50, 15);arrow26.setPosition(X+14, Y-15);arrow26.setColor(fill);arrow26.rotate(-35);    
+        add(arrow26);
+        
+        arrow26S1 = new Oval(50, 15);arrow26S1.setPosition(X-14, Y-15);arrow26S1.setColor(fill);arrow26S1.rotate(35);   
+        add(arrow26S1);
+        
+        arrow26S2 = new Oval(55, 15);arrow26S2.setPosition(X, Y+4);arrow26S2.setColor(fill);   
+        add(arrow26S2);
+        
+        arrow26L = new Oval(75, 20);arrow26L.setPosition(X, Y+10);arrow26L.setColor(fill);    
+        add(arrow26L);
+        
+        arrow26C = new Oval(20, 40);arrow26C.setPosition(X, Y);arrow26C.setColor(fill);    
+        add(arrow26C);
+        
+        arrow26S2.rotate(180);arrow26S1.rotate(270);arrow26.rotate(270);arrow26L.rotate(90);arrow26C.rotate(90);}}
+function arrows27(X,Y,Rota1,fill){if (Rota1 == 90){
+        arrow27 = new Oval(50, 15);arrow27.setPosition(X+14, Y-15);arrow27.setColor(fill);arrow27.rotate(-35);    
+        add(arrow27);
+        
+        arrow27S1 = new Oval(50, 15);arrow27S1.setPosition(X-14, Y-15);arrow27S1.setColor(fill);arrow27S1.rotate(35);   
+        add(arrow27S1);
+        
+        arrow27S2 = new Oval(55, 15);arrow27S2.setPosition(X, Y+4);arrow27S2.setColor(fill);   
+        add(arrow27S2);
+        
+        arrow27L = new Oval(75, 20);arrow27L.setPosition(X, Y+10);arrow27L.setColor(fill);    
+        add(arrow27L);
+        
+        arrow27C = new Oval(20, 40);arrow27C.setPosition(X, Y);arrow27C.setColor(fill);    
+        add(arrow27C);
+        
+        arrow27S2.rotate(180);arrow27S1.rotate(270);arrow27.rotate(270);arrow27L.rotate(90);arrow27C.rotate(90);}}
+function arrows28(X,Y,Rota1,fill){if (Rota1 == 90){
+        arrow28 = new Oval(50, 15);arrow28.setPosition(X+14, Y-15);arrow28.setColor(fill);arrow28.rotate(-35);    
+        add(arrow28);
+        
+        arrow28S1 = new Oval(50, 15);arrow28S1.setPosition(X-14, Y-15);arrow28S1.setColor(fill);arrow28S1.rotate(35);   
+        add(arrow28S1);
+        
+        arrow28S2 = new Oval(55, 15);arrow28S2.setPosition(X, Y+4);arrow28S2.setColor(fill);   
+        add(arrow28S2);
+        
+        arrow28L = new Oval(75, 20);arrow28L.setPosition(X, Y+10);arrow28L.setColor(fill);    
+        add(arrow28L);
+        
+        arrow28C = new Oval(20, 40);arrow28C.setPosition(X, Y);arrow28C.setColor(fill);    
+        add(arrow28C);
+        
+        arrow28S2.rotate(180);arrow28S1.rotate(270);arrow28.rotate(270);arrow28L.rotate(90);arrow28C.rotate(90);}}
+function arrows29(X,Y,Rota1,fill){if (Rota1 == 90){
+        arrow29 = new Oval(50, 15);arrow29.setPosition(X+14, Y-15);arrow29.setColor(fill);arrow29.rotate(-35);    
+        add(arrow29);
+        
+        arrow29S1 = new Oval(50, 15);arrow29S1.setPosition(X-14, Y-15);arrow29S1.setColor(fill);arrow29S1.rotate(35);   
+        add(arrow29S1);
+        
+        arrow29S2 = new Oval(55, 15);arrow29S2.setPosition(X, Y+4);arrow29S2.setColor(fill);   
+        add(arrow29S2);
+        
+        arrow29L = new Oval(75, 20);arrow29L.setPosition(X, Y+10);arrow29L.setColor(fill);    
+        add(arrow29L);
+        
+        arrow29C = new Oval(20, 40);arrow29C.setPosition(X, Y);arrow29C.setColor(fill);    
+        add(arrow29C);
+        
+        arrow29S2.rotate(180);arrow29S1.rotate(270);arrow29.rotate(270);arrow29L.rotate(90);arrow29C.rotate(90);}}
+function arrows30(X,Y,Rota1,fill){if (Rota1 == 90){
+        arrow30 = new Oval(50, 15);arrow30.setPosition(X+14, Y-15);arrow30.setColor(fill);arrow30.rotate(-35);    
+        add(arrow30);
+        
+        arrow30S1 = new Oval(50, 15);arrow30S1.setPosition(X-14, Y-15);arrow30S1.setColor(fill);arrow30S1.rotate(35);   
+        add(arrow30S1);
+        
+        arrow30S2 = new Oval(55, 15);arrow30S2.setPosition(X, Y+4);arrow30S2.setColor(fill);   
+        add(arrow30S2);
+        
+        arrow30L = new Oval(75, 20);arrow30L.setPosition(X, Y+10);arrow30L.setColor(fill);    
+        add(arrow30L);
+        
+        arrow30C = new Oval(20, 40);arrow30C.setPosition(X, Y);arrow30C.setColor(fill);    
+        add(arrow30C);
+        
+        arrow30S2.rotate(180);arrow30S1.rotate(270);arrow30.rotate(270);arrow30L.rotate(90);arrow30C.rotate(90);}}
+function arrows31(X,Y,Rota1,fill){if (Rota1 == 180){
+        arrow31 = new Oval(50, 15);arrow31.setPosition(X, Y);arrow31.setColor(fill);arrow31.rotate(-35);
+        add(arrow31);
+        
+        arrow31S1 = new Oval(50, 15);arrow31S1.setPosition(X, Y+25);arrow31S1.setColor(fill);arrow31S1.rotate(35);
+        add(arrow31S1);
+        
+        arrow31S2 = new Oval(55, 15);arrow31S2.setPosition(X-20, Y+13);arrow31S2.setColor(fill);
+        add(arrow31S2);
+        
+        arrow31L = new Oval(75, 20);arrow31L.setPosition(X-30, Y+12);arrow31L.setColor(fill);
+        add(arrow31L);
+        
+        arrow31C = new Oval(20, 40);arrow31C.setPosition(X-10, Y+10);arrow31C.setColor(fill);
+        add(arrow31C);
+        
+        arrow31S2.rotate(90);arrow31S1.rotate(110);arrow31.rotate(250);}}    
+function arrows32(X,Y,Rota1,fill){if (Rota1 == 180){
+        arrow32 = new Oval(50, 15);arrow32.setPosition(X, Y);arrow32.setColor(fill);arrow32.rotate(-35);
+        add(arrow32);
+        
+        arrow32S1 = new Oval(50, 15);arrow32S1.setPosition(X, Y+25);arrow32S1.setColor(fill);arrow32S1.rotate(35);
+        add(arrow32S1);
+        
+        arrow32S2 = new Oval(55, 15);arrow32S2.setPosition(X-20, Y+13);arrow32S2.setColor(fill);
+        add(arrow32S2);
+        
+        arrow32L = new Oval(75, 20);arrow32L.setPosition(X-30, Y+12);arrow32L.setColor(fill);
+        add(arrow32L);
+        
+        arrow32C = new Oval(20, 40);arrow32C.setPosition(X-10, Y+10);arrow32C.setColor(fill);
+        add(arrow32C);
+        
+        arrow32S2.rotate(90);arrow32S1.rotate(110);arrow32.rotate(250);}}   
+function arrows33(X,Y,Rota1,fill){if (Rota1 == 180){
+        arrow33 = new Oval(50, 15);arrow33.setPosition(X, Y);arrow33.setColor(fill);arrow33.rotate(-35);
+        add(arrow33);
+        
+        arrow33S1 = new Oval(50, 15);arrow33S1.setPosition(X, Y+25);arrow33S1.setColor(fill);arrow33S1.rotate(35);
+        add(arrow33S1);
+        
+        arrow33S2 = new Oval(55, 15);arrow33S2.setPosition(X-20, Y+13);arrow33S2.setColor(fill);
+        add(arrow33S2);
+        
+        arrow33L = new Oval(75, 20);arrow33L.setPosition(X-30, Y+12);arrow33L.setColor(fill);
+        add(arrow33L);
+        
+        arrow33C = new Oval(20, 40);arrow33C.setPosition(X-10, Y+10);arrow33C.setColor(fill);
+        add(arrow33C);
+        
+        arrow33S2.rotate(90);arrow33S1.rotate(110);arrow33.rotate(250);}}   
+function arrows34(X,Y,Rota1,fill){if (Rota1 == 180){
+        arrow34 = new Oval(50, 15);arrow34.setPosition(X, Y);arrow34.setColor(fill);arrow34.rotate(-35);
+        add(arrow34);
+        
+        arrow34S1 = new Oval(50, 15);arrow34S1.setPosition(X, Y+25);arrow34S1.setColor(fill);arrow34S1.rotate(35);
+        add(arrow34S1);
+        
+        arrow34S2 = new Oval(55, 15);arrow34S2.setPosition(X-20, Y+13);arrow34S2.setColor(fill);
+        add(arrow34S2);
+        
+        arrow34L = new Oval(75, 20);arrow34L.setPosition(X-30, Y+12);arrow34L.setColor(fill);
+        add(arrow34L);
+        
+        arrow34C = new Oval(20, 40);arrow34C.setPosition(X-10, Y+10);arrow34C.setColor(fill);
+        add(arrow34C);
+        
+        arrow34S2.rotate(90);arrow34S1.rotate(110);arrow34.rotate(250);}}   
+function arrows35(X,Y,Rota1,fill){if (Rota1 == 180){
+        arrow35 = new Oval(50, 15);arrow35.setPosition(X, Y);arrow35.setColor(fill);arrow35.rotate(-35);
+        add(arrow35);
+        
+        arrow35S1 = new Oval(50, 15);arrow35S1.setPosition(X, Y+25);arrow35S1.setColor(fill);arrow35S1.rotate(35);
+        add(arrow35S1);
+        
+        arrow35S2 = new Oval(55, 15);arrow35S2.setPosition(X-20, Y+13);arrow35S2.setColor(fill);
+        add(arrow35S2);
+        
+        arrow35L = new Oval(75, 20);arrow35L.setPosition(X-30, Y+12);arrow35L.setColor(fill);
+        add(arrow35L);
+        
+        arrow35C = new Oval(20, 40);arrow35C.setPosition(X-10, Y+10);arrow35C.setColor(fill);
+        add(arrow35C);
+        
+        arrow35S2.rotate(90);arrow35S1.rotate(110);arrow35.rotate(250);}}   
+function arrows36(X,Y,Rota1,fill){if (Rota1 == 180){
+        arrow36 = new Oval(50, 15);arrow36.setPosition(X, Y);arrow36.setColor(fill);arrow36.rotate(-35);
+        add(arrow36);
+        
+        arrow36S1 = new Oval(50, 15);arrow36S1.setPosition(X, Y+25);arrow36S1.setColor(fill);arrow36S1.rotate(35);
+        add(arrow36S1);
+        
+        arrow36S2 = new Oval(55, 15);arrow36S2.setPosition(X-20, Y+13);arrow36S2.setColor(fill);
+        add(arrow36S2);
+        
+        arrow36L = new Oval(75, 20);arrow36L.setPosition(X-30, Y+12);arrow36L.setColor(fill);
+        add(arrow36L);
+        
+        arrow36C = new Oval(20, 40);arrow36C.setPosition(X-10, Y+10);arrow36C.setColor(fill);
+        add(arrow36C);
+        
+        arrow36S2.rotate(90);arrow36S1.rotate(110);arrow36.rotate(250);}}   
+function arrows37(X,Y,Rota1,fill){if (Rota1 == 180){
+        arrow37 = new Oval(50, 15);arrow37.setPosition(X, Y);arrow37.setColor(fill);arrow37.rotate(-35);
+        add(arrow37);
+        
+        arrow37S1 = new Oval(50, 15);arrow37S1.setPosition(X, Y+25);arrow37S1.setColor(fill);arrow37S1.rotate(35);
+        add(arrow37S1);
+        
+        arrow37S2 = new Oval(55, 15);arrow37S2.setPosition(X-20, Y+13);arrow37S2.setColor(fill);
+        add(arrow37S2);
+        
+        arrow37L = new Oval(75, 20);arrow37L.setPosition(X-30, Y+12);arrow37L.setColor(fill);
+        add(arrow37L);
+        
+        arrow37C = new Oval(20, 40);arrow37C.setPosition(X-10, Y+10);arrow37C.setColor(fill);
+        add(arrow37C);
+        
+        arrow37S2.rotate(90);arrow37S1.rotate(110);arrow37.rotate(250);}}   
+function arrows38(X,Y,Rota1,fill){if (Rota1 == 180){
+        arrow38 = new Oval(50, 15);arrow38.setPosition(X, Y);arrow38.setColor(fill);arrow38.rotate(-35);
+        add(arrow38);
+        
+        arrow38S1 = new Oval(50, 15);arrow38S1.setPosition(X, Y+25);arrow38S1.setColor(fill);arrow38S1.rotate(35);
+        add(arrow38S1);
+        
+        arrow38S2 = new Oval(55, 15);arrow38S2.setPosition(X-20, Y+13);arrow38S2.setColor(fill);
+        add(arrow38S2);
+        
+        arrow38L = new Oval(75, 20);arrow38L.setPosition(X-30, Y+12);arrow38L.setColor(fill);
+        add(arrow38L);
+        
+        arrow38C = new Oval(20, 40);arrow38C.setPosition(X-10, Y+10);arrow38C.setColor(fill);
+        add(arrow38C);
+        
+        arrow38S2.rotate(90);arrow38S1.rotate(110);arrow38.rotate(250);}}   
+function arrows39(X,Y,Rota1,fill){if (Rota1 == 180){
+        arrow39 = new Oval(50, 15);arrow39.setPosition(X, Y);arrow39.setColor(fill);arrow39.rotate(-35);
+        add(arrow39);
+        
+        arrow39S1 = new Oval(50, 15);arrow39S1.setPosition(X, Y+25);arrow39S1.setColor(fill);arrow39S1.rotate(35);
+        add(arrow39S1);
+        
+        arrow39S2 = new Oval(55, 15);arrow39S2.setPosition(X-20, Y+13);arrow39S2.setColor(fill);
+        add(arrow39S2);
+        
+        arrow39L = new Oval(75, 20);arrow39L.setPosition(X-30, Y+12);arrow39L.setColor(fill);
+        add(arrow39L);
+        
+        arrow39C = new Oval(20, 40);arrow39C.setPosition(X-10, Y+10);arrow39C.setColor(fill);
+        add(arrow39C);
+        
+        arrow39S2.rotate(90);arrow39S1.rotate(110);arrow39.rotate(250);}}   
+function arrows40(X,Y,Rota1,fill){if (Rota1 == 180){
+        arrow40 = new Oval(50, 15);
+        arrow40.setPosition(X, Y);
+        arrow40.setColor(fill);
+        arrow40.rotate(-35);add(arrow40);
+        arrow40S1 = new Oval(50, 15);
+        arrow40S1.setPosition(X, Y+25);
+        arrow40S1.setColor(fill);
+        arrow40S1.rotate(35);add(arrow40S1);
+        arrow40S2 = new Oval(55, 15);
+        arrow40S2.setPosition(X-20, Y+13);
+        arrow40S2.setColor(fill);add(arrow40S2);
+        arrow40L = new Oval(75, 20);
+        arrow40L.setPosition(X-30, Y+12);
+        arrow40L.setColor(fill);add(arrow40L);
+        arrow40C = new Oval(20, 40);
+        arrow40C.setPosition(X-10, Y+10);
+        arrow40C.setColor(fill);add(arrow40C);
+        arrow40S2.rotate(90);
+        arrow40S1.rotate(110);
+        arrow40.rotate(250);}}   
+
+
+function keyDown(e) {
+	if (e.keyCode == Keyboard.LEFT || e.keyCode == Keyboard.letter('a')){
+	    if (arrowS1.getY()<110 && arrowS1.getY()>-20){points+=1;println(points);remove(arrow);remove(arrowS1);remove(arrowS2);remove(arrowL);remove(arrowC);addsArrowTicker = 0;}
+        if (arrow2S1.getY()<110 && arrow2S1.getY()>-20){points+=1;println(points);remove(arrow2);remove(arrow2S1);remove(arrow2S2);remove(arrow2L);remove(arrow2C);addsArrowTicker2 = 0;}
+        if (arrow3S1.getY()<110 && arrow3S1.getY()>-20){points+=1;println(points);remove(arrow3);remove(arrow3S1);remove(arrow3S2);remove(arrow3L);remove(arrow3C);addsArrowTicker3 = 0;}
+        if (arrow4S1.getY()<110 && arrow4S1.getY()>-20){points+=1;println(points);remove(arrow4);remove(arrow4S1);remove(arrow4S2);remove(arrow4L);remove(arrow4C);addsArrowTicker4 = 0;}
+        if (arrow5S1.getY()<110 && arrow5S1.getY()>-20){points+=1;println(points);remove(arrow5);remove(arrow5S1);remove(arrow5S2);remove(arrow5L);remove(arrow5C);addsArrowTicker5 = 0;}
+        if (arrow6S1.getY()<110 && arrow6S1.getY()>-20){points+=1;println(points);remove(arrow6);remove(arrow6S1);remove(arrow6S2);remove(arrow6L);remove(arrow6C);addsArrowTicker6 = 0;}
+        if (arrow7S1.getY()<110 && arrow7S1.getY()>-20){points+=1;println(points);remove(arrow7);remove(arrow7S1);remove(arrow7S2);remove(arrow7L);remove(arrow7C);addsArrowTicker7 = 0;}
+        if (arrow8S1.getY()<110 && arrow8S1.getY()>-20){points+=1;println(points);remove(arrow8);remove(arrow8S1);remove(arrow8S2);remove(arrow8L);remove(arrow8C);addsArrowTicker8 = 0;}
+        if (arrow9S1.getY()<110 && arrow9S1.getY()>-20){points+=1;println(points);remove(arrow9);remove(arrow9S1);remove(arrow9S2);remove(arrow9L);remove(arrow9C);addsArrowTicker9 = 0;}
+        if (arrow10S1.getY()<110 && arrow10S1.getY()>-20){points+=1;println(points);remove(arrow10);remove(arrow10S1);remove(arrow10S2);remove(arrow10L);remove(arrow10C);addsArrowTicker10 = 0;}
+	    if (time>Amount){println("if (time == " + time + "){arrowY2 = 400;}// Left");}  }
+	    
+	if (e.keyCode == Keyboard.DOWN || e.keyCode == Keyboard.letter('s')) {
+	   if (arrow11S1.getY()<140 && arrow11S1.getY()>-80){points+=1;println(points);remove(arrow11);remove(arrow11S1);remove(arrow11S2);remove(arrow11L);remove(arrow11C);addsArrowTicker11 = 0;}
+	   if (arrow12S1.getY()<140 && arrow12S1.getY()>-80){points+=1;println(points);remove(arrow12);remove(arrow12S1);remove(arrow12S2);remove(arrow12L);remove(arrow12C);addsArrowTicker12 = 0;}
+	   if (arrow13S1.getY()<140 && arrow13S1.getY()>-80){points+=1;println(points);remove(arrow13);remove(arrow13S1);remove(arrow13S2);remove(arrow13L);remove(arrow13C);addsArrowTicker13 = 0;}
+	   if (arrow14S1.getY()<140 && arrow14S1.getY()>-80){points+=1;println(points);remove(arrow14);remove(arrow14S1);remove(arrow14S2);remove(arrow14L);remove(arrow14C);addsArrowTicker14 = 0;}
+	   if (arrow15S1.getY()<140 && arrow15S1.getY()>-80){points+=1;println(points);remove(arrow15);remove(arrow15S1);remove(arrow15S2);remove(arrow15L);remove(arrow15C);addsArrowTicker15 = 0;}
+	   if (arrow16S1.getY()<140 && arrow16S1.getY()>-80){points+=1;println(points);remove(arrow16);remove(arrow16S1);remove(arrow16S2);remove(arrow16L);remove(arrow16C);addsArrowTicker16 = 0;}
+	   if (arrow17S1.getY()<140 && arrow17S1.getY()>-80){points+=1;println(points);remove(arrow17);remove(arrow17S1);remove(arrow17S2);remove(arrow17L);remove(arrow17C);addsArrowTicker17 = 0;}
+	   if (arrow18S1.getY()<140 && arrow18S1.getY()>-80){points+=1;println(points);remove(arrow18);remove(arrow18S1);remove(arrow18S2);remove(arrow18L);remove(arrow18C);addsArrowTicker18 = 0;}     
+	   if (arrow19S1.getY()<140 && arrow19S1.getY()>-80){points+=1;println(points);remove(arrow19);remove(arrow19S1);remove(arrow19S2);remove(arrow19L);remove(arrow19C);addsArrowTicker19 = 0;}     
+	   if (arrow20S1.getY()<140 && arrow20S1.getY()>-80){points+=1;println(points);remove(arrow20);remove(arrow20S1);remove(arrow20S2);remove(arrow20L);remove(arrow20C);addsArrowTicker20 = 0;}	
+        if (time>Amount){println("if (time == " + time + "){arrowY12 = 400;}// Down");}	  }
+        
+	if (e.keyCode == Keyboard.UP || e.keyCode == Keyboard.letter('w')) {
+	   if (arrow21S1.getY()<100 && arrow21S1.getY()>-80){points+=1;println(points);remove(arrow21);remove(arrow21S1);remove(arrow21S2);remove(arrow21L);remove(arrow21C);addsArrowTicker21 = 0;}
+	   if (arrow22S1.getY()<100 && arrow22S1.getY()>-80){points+=1;println(points);remove(arrow22);remove(arrow22S1);remove(arrow22S2);remove(arrow22L);remove(arrow22C);addsArrowTicker22 = 0;}
+	   if (arrow23S1.getY()<100 && arrow23S1.getY()>-80){points+=1;println(points);remove(arrow23);remove(arrow23S1);remove(arrow23S2);remove(arrow23L);remove(arrow23C);addsArrowTicker23 = 0;}
+	   if (arrow24S1.getY()<100 && arrow24S1.getY()>-80){points+=1;println(points);remove(arrow24);remove(arrow24S1);remove(arrow24S2);remove(arrow24L);remove(arrow24C);addsArrowTicker24 = 0;}
+	   if (arrow25S1.getY()<100 && arrow25S1.getY()>-80){points+=1;println(points);remove(arrow25);remove(arrow25S1);remove(arrow25S2);remove(arrow25L);remove(arrow25C);addsArrowTicker25 = 0;}
+	   if (arrow26S1.getY()<100 && arrow26S1.getY()>-80){points+=1;println(points);remove(arrow26);remove(arrow26S1);remove(arrow26S2);remove(arrow26L);remove(arrow26C);addsArrowTicker26 = 0;}
+	   if (arrow27S1.getY()<100 && arrow27S1.getY()>-80){points+=1;println(points);remove(arrow27);remove(arrow27S1);remove(arrow27S2);remove(arrow27L);remove(arrow27C);addsArrowTicker27 = 0;}
+	   if (arrow28S1.getY()<100 && arrow28S1.getY()>-80){points+=1;println(points);remove(arrow28);remove(arrow28S1);remove(arrow28S2);remove(arrow28L);remove(arrow28C);addsArrowTicker28 = 0;}     
+	   if (arrow29S1.getY()<100 && arrow29S1.getY()>-80){points+=1;println(points);remove(arrow29);remove(arrow29S1);remove(arrow29S2);remove(arrow29L);remove(arrow29C);addsArrowTicker29 = 0;}     
+	   if (arrow30S1.getY()<100 && arrow30S1.getY()>-80){points+=1;println(points);remove(arrow30);remove(arrow30S1);remove(arrow30S2);remove(arrow30L);remove(arrow30C);addsArrowTicker30 = 0;}
+        if (time>Amount){println("if (time == " + time + "){arrowY22 = 400;}// Up");}	  }
+        
+    if (e.keyCode == Keyboard.RIGHT || e.keyCode == Keyboard.letter('d')) {
+	   if (arrow31S1.getY()<100 && arrow31S1.getY()>-80){points+=1;println(points);remove(arrow31);remove(arrow31S1);remove(arrow31S2);remove(arrow31L);remove(arrow31C);addsArrowTicker31 = 0;}
+	   if (arrow32S1.getY()<100 && arrow32S1.getY()>-80){points+=1;println(points);remove(arrow32);remove(arrow32S1);remove(arrow32S2);remove(arrow32L);remove(arrow32C);addsArrowTicker32 = 0;}
+	   if (arrow33S1.getY()<100 && arrow33S1.getY()>-80){points+=1;println(points);remove(arrow33);remove(arrow33S1);remove(arrow33S2);remove(arrow33L);remove(arrow33C);addsArrowTicker33 = 0;}
+	   if (arrow34S1.getY()<100 && arrow34S1.getY()>-80){points+=1;println(points);remove(arrow34);remove(arrow34S1);remove(arrow34S2);remove(arrow34L);remove(arrow34C);addsArrowTicker34 = 0;}
+	   if (arrow35S1.getY()<100 && arrow35S1.getY()>-80){points+=1;println(points);remove(arrow35);remove(arrow35S1);remove(arrow35S2);remove(arrow35L);remove(arrow35C);addsArrowTicker35 = 0;}
+	   if (arrow36S1.getY()<100 && arrow36S1.getY()>-80){points+=1;println(points);remove(arrow36);remove(arrow36S1);remove(arrow36S2);remove(arrow36L);remove(arrow36C);addsArrowTicker36 = 0;}
+	   if (arrow37S1.getY()<100 && arrow37S1.getY()>-80){points+=1;println(points);remove(arrow37);remove(arrow37S1);remove(arrow37S2);remove(arrow37L);remove(arrow37C);addsArrowTicker37 = 0;}
+	   if (arrow38S1.getY()<100 && arrow38S1.getY()>-80){points+=1;println(points);remove(arrow38);remove(arrow38S1);remove(arrow38S2);remove(arrow38L);remove(arrow38C);addsArrowTicker38 = 0;}     
+	   if (arrow39S1.getY()<100 && arrow39S1.getY()>-80){points+=1;println(points);remove(arrow39);remove(arrow39S1);remove(arrow39S2);remove(arrow39L);remove(arrow39C);addsArrowTicker39 = 0;}     
+	   if (arrow40S1.getY()<100 && arrow40S1.getY()>-80){points+=1;println(points);remove(arrow40);remove(arrow40S1);remove(arrow40S2);remove(arrow40L);remove(arrow40C);addsArrowTicker40 = 0;}
+        if (time>Amount){println("if (time == " + time + "){arrowY33 = 400;}// Right");}    }
+        
+}
