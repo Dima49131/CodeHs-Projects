@@ -1,0 +1,57 @@
+var input = readLine('');
+var Base26;
+var asciiLetter;
+
+/*
+all usable characters
+
+! @ # $ % ^ & * ( ) { } [ ] ~ ` - _ = + \\ | / ? < , > . ; : ' " 
+ABCDEFGHIJKLMNOPQRSTUVWXYZ 
+abcdefghijklmnopqrstuvwxyz 
+0123456789
+
+*/
+
+for (var i = 0; i < input.length;i++){
+    asciiLetter = input.charCodeAt(i);
+    Base26 = input[i];
+    if (asciiLetter >= 97 && asciiLetter <= 122 || asciiLetter >= -49 && asciiLetter <= -40 || asciiLetter >= -32 && asciiLetter <= -7){Base26 = input.charCodeAt(i) - 96;}
+
+    if (asciiLetter == 48){Base26 = "[0]";} // was originally a number
+    if (asciiLetter == 49){Base26 = "[1]";}
+    if (asciiLetter == 50){Base26 = "[2]";}
+    if (asciiLetter == 51){Base26 = "[3]";} 
+    if (asciiLetter == 52){Base26 = "[4]";}
+    if (asciiLetter == 53){Base26 = "[5]";}
+    if (asciiLetter == 54){Base26 = "[6]";}
+    if (asciiLetter == 55){Base26 = "[7]";}
+    if (asciiLetter == 56){Base26 = "[8]";}
+    if (asciiLetter == 57){Base26 = "[9]";}
+    if (asciiLetter == 65){Base26 = "*1";} // cap : A
+    if (asciiLetter == 66){Base26 = "*2";}
+    if (asciiLetter == 67){Base26 = "*3";}
+    if (asciiLetter == 68){Base26 = "*4";}
+    if (asciiLetter == 69){Base26 = "*5";}
+    if (asciiLetter == 70){Base26 = "*6";}
+    if (asciiLetter == 71){Base26 = "*7";}
+    if (asciiLetter == 72){Base26 = "*8";}
+    if (asciiLetter == 73){Base26 = "*9";}
+    if (asciiLetter == 74){Base26 = "*10";}
+    if (asciiLetter == 75){Base26 = "*11";}
+    if (asciiLetter == 76){Base26 = "*12";}
+    if (asciiLetter == 77){Base26 = "*13";}
+    if (asciiLetter == 78){Base26 = "*14";}
+    if (asciiLetter == 79){Base26 = "*15";}
+    if (asciiLetter == 80){Base26 = "*16";}
+    if (asciiLetter == 81){Base26 = "*17";}
+    if (asciiLetter == 82){Base26 = "*18";}
+    if (asciiLetter == 83){Base26 = "*19";}
+    if (asciiLetter == 84){Base26 = "*20";}
+    if (asciiLetter == 85){Base26 = "*21";}
+    if (asciiLetter == 86){Base26 = "*22";}
+    if (asciiLetter == 87){Base26 = "*23";}
+    if (asciiLetter == 88){Base26 = "*24";}
+    if (asciiLetter == 89){Base26 = "*25";}
+    if (asciiLetter == 90){Base26 = "*26";}
+    print(Base26 + " ");
+}
