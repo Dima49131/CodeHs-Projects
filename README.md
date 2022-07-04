@@ -1,11 +1,12 @@
 # CodeHs-Projects
-A repository for the CodeHs projects ive done in the past. I've used the CodeHs website for a year and have created a variety of programs, some more useful than others. There are games, challenges and other miscellaneous projects. 
+A repository for the CodeHs projects ive done in the past. I've used the CodeHs website for a year and have created a variety of programs, some more useful than others. There are games, challenges and other miscellaneous projects. Down below are links to the projects hosted on the CodeHs website.
 
 
 // For more details on how the programs function and logic behind certain programs look at the Program files info.
 
 
 
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .
  
  __Games__ 
 
@@ -17,7 +18,7 @@ A repository for the CodeHs projects ive done in the past. I've used the CodeHs 
 
 [Thursday Night](https://codehs.com/sandbox/id/thurday-night-XHBJWN/run)
 
-.  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .
 
  __Cryptology__
  
@@ -27,6 +28,16 @@ A repository for the CodeHs projects ive done in the past. I've used the CodeHs 
 
 // these next two are "Key Ciphers" and they both use random generated key
 
-[Addition Key Cipher Encrypter](https://codehs.com/sandbox/id/encrypter-with-random-key-EK85Zd/run) --->
-[Addition Key Cipher Decrypter](https://codehs.com/sandbox/id/decrypts-random-key-L30nAt/run)
+[Addition Key Encrypter](https://codehs.com/sandbox/id/encrypter-with-random-key-EK85Zd/run) --->
+[Decrypter](https://codehs.com/sandbox/id/decrypts-random-key-L30nAt/run)
+
+[Multiplication Key Encrypter](https://codehs.com/sandbox/id/creates-a-key-for-message-JeenFj/run) --->
+[Decrypter](https://codehs.com/sandbox/id/decrypter-via-key-gIXcj3/run)
+
+
+.  .  .  .  .  .  .  .  .  .  .  .  .  .
+
+
+
+
 
